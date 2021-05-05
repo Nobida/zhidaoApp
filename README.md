@@ -59,15 +59,15 @@ It is an Learning App based on React, react-redux,
 ### 3、ScreenShot
 
 
-##### HomePage
-<img src="https://github.com/Nobida/Manga-App/blob/main/screenShot/homepage.png" width="475">
+##### Homepage
+<img src="https://github.com/Nobida/zhidaoApp/blob/main/screenShot/courses.png" width="475">
 
 
-##### Category
-<img src="https://github.com/Nobida/Manga-App/blob/main/screenShot/category.png" width="475">
+##### classContent
+<img src="https://github.com/Nobida/zhidaoApp/blob/main/screenShot/classContent.png" width="475">
 
-##### Category Detail
-<img src="https://github.com/Nobida/Manga-App/blob/main/screenShot/categoryDetail.png" width="475">
+##### classCover
+<img src="https://github.com/Nobida/zhidaoApp/blob/main/screenShot/classCover.png" width="475">
 
 
 For others [screenShot](./screenShot)
