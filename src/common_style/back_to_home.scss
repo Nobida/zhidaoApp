@@ -1,0 +1,22 @@
+
+// back to home
+.back-to-home{
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
+  width: 80px;
+  height: 25px;
+  font-size: 12px;
+  font-weight: 500;
+  background: rgba(255,255,255,0.8);
+  line-height: 25px;
+  z-index: 900;
+  @include flex(center,center);
+  @include box-shadow(2px 3px 10px rgba(0,0,0,0.1));
+  @include rounded-corner(40px);
+  &.top{
+    right: 20px;
+    left: auto;
+    top: 20px;
+  }
+}

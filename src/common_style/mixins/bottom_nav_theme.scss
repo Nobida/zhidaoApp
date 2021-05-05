@@ -1,0 +1,19 @@
+@mixin bottom-nav-theme(){
+  .bottom-nav{
+    background: $brand-color;
+    .nav-item{
+      .nav-label{
+        color: $brand-color;
+      }
+      &::before{
+        background-color: $brand-color;
+      }
+      .nav-icon{
+        svg{
+          fill: $brand-color;
+        }
+      }
+    }
+  }
+
+}

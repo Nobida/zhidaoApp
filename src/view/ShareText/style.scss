@@ -1,0 +1,37 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+.share-text{
+  width: 100%;
+  //background: #555;
+  .canvas-container{
+    //transform: scale(0.7);
+    opacity: 1;
+    display:none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    //position: relative;
+    //@include box-shadow(0 0 10px rgba(0,0,0,0.2));
+  }
+
+  .canvas-img{
+    width: 100%;
+    max-width: 500px;
+    margin: 0  auto;
+    margin-bottom: 50px;
+  }
+  .save-info{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.7);
+    height: 50px;
+    line-height: 50px;
+    font-size: $font-size-small;
+    text-align: center;
+    color: $text-color-light;
+    @include box-shadow(0px 0px 10px rgba(0,0,0,0.1));
+  }
+
+}

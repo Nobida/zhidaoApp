@@ -1,0 +1,22 @@
+@mixin type-theme{
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: $headings-color;
+    small,
+    .small {
+      color: $headings-small-color;
+    }
+  }
+  p{
+    color: $text-color;
+  }
+  a{
+    color: $text-color;
+  }
+  .text-muted {
+    color: $text-color-light;
+  }
+  .text-fade{
+    color: $text-color-lighter;
+  }
+}

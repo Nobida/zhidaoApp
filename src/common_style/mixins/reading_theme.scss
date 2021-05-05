@@ -1,0 +1,13 @@
+@import "../../view/Reading/TOC/theme_style";
+@import "../../view/Reading/ReadingSetting/theme_style";
+@import "../../view/Reading/ReadingContent/theme_style";
+
+@mixin reading-theme{
+  @include contents-theme;
+  @include reading-setting-theme;
+  @include reading-content-theme;
+  &.reading{
+    background: $bg-color;
+    color: $text-color;
+  }
+}

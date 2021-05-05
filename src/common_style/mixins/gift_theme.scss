@@ -1,0 +1,6 @@
+@import "../../view/Gift/theme_style";
+@import "../../view/GiftImage/theme_style";
+@mixin gift-view-theme{
+  @include gift-theme;
+  @include gift-img-theme;
+}

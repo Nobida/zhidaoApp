@@ -1,0 +1,49 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+$quiz-num-size: 30px;
+.quiz{
+  padding: $padding-base-vertical $padding-large-horizontal;
+  .quiz-item{
+    margin: 20px 0;
+    .quiz-num{
+      width: $quiz-num-size;
+      height: $quiz-num-size;
+      margin: 30px auto;
+      color: $white;
+      background: $brand-color;
+      @include rounded-corner(100%);
+      @include base-shadow;
+      @include flex(center,center);
+    }
+    .quiz-title{
+      margin: 30px 0;
+      font-size: $font-size-base;
+      line-height: $line-height-base;
+    }
+    .glyph{
+      height: 1.8em;
+    }
+    .quiz-answer{
+      margin: 20px 0 ;
+      @include transition(all .2s);
+      @include flex(flex-start);
+      @include unable-tap-color;
+      .label{
+        font-weight: 500;
+        margin-right: 10px;
+      }
+      .content{
+        color: $text-color-light;
+      }
+      &.active{
+        padding: 10px 20px;
+        @include rounded-corner(20px);
+        @include box-shadow(0px 0px 20px rgba(0,0,0,0.08));
+        .content{
+          color: $text-color;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

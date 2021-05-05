@@ -1,0 +1,125 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+$course-item-height: 190px;
+.course-info{
+  padding-bottom: $nav-height;
+  .course-head{
+    height: $course-item-height;
+    overflow: hidden;
+    position: relative;
+    border-radius:10px;
+    margin: 20px;
+    margin-bottom: 40px;
+    .bg-container{
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: $course-item-height;
+      img{
+        width: 100%;
+      }
+    }
+    .content{
+      border-radius:10px;
+      position: absolute;
+      background: $card-mask-color;
+      top:0;
+      left:0;
+      width: 100%;
+      height: $course-item-height;
+      color: $white;
+      @include flex(center,center,column);
+      .title{
+        font-size: $font-size-h3;
+        font-weight: bold;
+      }
+      .date{
+        font-size: $font-size-small;
+        margin-top: 15px;
+      }
+    }
+    &.white{
+      .bg-container{
+        background: $white;
+      }
+      .title{
+        color: $dark;
+      }
+    }
+  }
+  .course-book-item{
+    margin: 30px $padding-large-horizontal;
+    @include flex(flex-start,center);
+    .book-item-info{
+      margin-left: 15px;
+      height: 110px;
+      overflow: hidden;
+      .book-title{
+        font-size: $font-size-base;
+        font-weight: $headings-font-weight;
+        margin-bottom: 5px;
+      }
+      .book-time{
+        font-size: $font-size-small;
+        margin-bottom: 5px;
+      }
+      .book-desc{
+        font-size: $font-size-base;
+        color: $text-color-light;
+      }
+    }
+  }
+  .trial-info{
+    color: white;
+    backgrond: $primary-color;
+    padding: 10px;
+    margin: 20px;
+    background: rgba(0,0,0,0.5);
+    font-size: $font-size-small;
+    @include rounded-corner(6px);
+    @include base-shadow;
+  }
+  .invite{
+    position: fixed;
+    bottom: 70px;
+    right: -20px;
+    width: 130px;
+    height: 40px;
+    margin-top: 20px;
+    padding-right: 20px;
+    font-size: $font-size-small;
+    font-weight: bold;
+    background: rgba(255,255,255,0.7);
+    z-index: 800;
+    @include rounded-corner(30px);
+    @include box-shadow(2px 4px 20px rgba(0,0,0,0.1));
+    @include flex(center,center);
+
+    span{
+      margin-left: 10px;
+    }
+  }
+  .bottom-info{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: $nav-height - 10px;
+    background: $brand-color;
+    color: $white;
+    font-weight: $headings-font-weight;
+    @include flex(center,center);
+    .ad-btn,.intro-btn{
+      height: 100%;
+      width: 50%;
+      color: white;
+      @include flex(center,center);
+    }
+    .intro-btn{
+      width: 50%;
+      background: $primary-color
+    }
+  }
+
+}

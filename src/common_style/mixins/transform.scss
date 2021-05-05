@@ -1,0 +1,7 @@
+@mixin transform($transform){
+  transform:$transform;
+  -ms-transform:$transform; 	/* IE 9 */
+  -moz-transform:$transform; 	/* Firefox */
+  -webkit-transform:$transform;
+  -o-transform:$transform; 	/* Opera */
+}

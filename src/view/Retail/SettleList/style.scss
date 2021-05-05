@@ -1,0 +1,19 @@
+@import '../../../common_style/variables';
+@import '../../../common_style/mixins';
+
+
+.settle-item-intro{
+    background: white;
+    height: 45px;
+    font-size: 15px;
+    @include flex(space-between, center);
+    color: $text-color-light;
+    .settlement-information{
+        @include flex(center, center);
+        width: 50%;
+    }
+    .settlement-amount{
+        @include flex(center, center);
+        width: 50%;
+    }
+}

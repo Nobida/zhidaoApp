@@ -1,0 +1,14 @@
+@mixin icon-button-theme() {
+  .icon-button {
+    background: $icon-button-background;
+    svg {
+      fill: $icon-button-icon-color;
+    }
+    &.inverse {
+      background: $icon-button-icon-color;
+      svg {
+        fill: $icon-button-background;
+      }
+    }
+  }
+}

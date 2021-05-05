@@ -1,0 +1,103 @@
+.icon-container{
+  text-align: center;
+  cursor: pointer;
+  padding: 0;
+  min-width: $icon-size-base;
+  min-height: $icon-size-base;
+  @include unable-tap-color;
+  display: block;
+
+  .label{
+    font-size: $icon-label-size;
+    color: $icon-label-color;
+  }
+  &.icon-sm{
+    min-width: $icon-size-small;
+    min-height: $icon-size-small;
+  }
+  &.icon-xs{
+    min-width: $icon-size-tiny;
+    min-height: $icon-size-tiny;
+  }
+  &.icon-lg{
+    min-width: $icon-size-large;
+    min-height: $icon-size-large;
+  }
+}
+.icon{
+
+  cursor: pointer;
+  background:none;
+  padding: 0;
+  border: none;
+
+  margin: 0 auto ;
+
+  @keyframes iconRippleAnim{
+    from{
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    to{
+      width: 80px;
+      height: 80px;
+      opacity: 0;
+    }
+  }
+  width: $icon-size-base;
+  height: $icon-size-base;
+  position: relative;
+  svg{
+    fill: $icon-color;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:1;
+  }
+  .click-panel{
+    background: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 200;
+  }
+  &.icon-sm{
+    width: $icon-size-small;
+    height: $icon-size-small;
+  }
+  &.icon-xs{
+    width: $icon-size-tiny;
+    height: $icon-size-tiny;
+  }
+  &.icon-lg{
+    width: $icon-size-large;
+    height: $icon-size-large;
+  }
+  &::before{
+      content: " ";
+      position: absolute;
+      display: inline-block;
+      vertical-align: middle;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      border-radius: 100%;
+      padding-top: 0;
+      // width: 80px;
+      // height: 80px;
+      opacity: 0;
+      background-color: $ripple-color-base;
+      @include transform(translate(-50%, -50%));
+  }
+  &:active:before {
+      width: 200%;
+      height: 200%;
+      animation: iconRippleAnim .3s ease-out;
+  }
+}

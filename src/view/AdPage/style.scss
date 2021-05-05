@@ -1,0 +1,132 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+.ad-page{
+  margin-bottom: $nav-height+30px;
+  .label{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    background: $brand-color;
+    color: white;
+    font-size: $font-size-tiny;
+    padding: 3px 7px;
+    @include rounded-corner(30px);
+
+  }
+  .ad-header{
+    @include flex(center,center,column);
+    margin: 10px;
+    margin-bottom: 50px;
+    .course-name{
+      font-weight: bold;
+    }
+    .card{
+      height: 180px;
+    }
+    .desc{ 
+      opacity: 0.8;
+      font-size: $font-size-small;
+      margin-top: 10px;
+    }
+  }
+  .info-box{
+    background: $white;
+    margin-top: -50px;
+    z-index: 1000;
+    font-size: $font-size-small;
+    width: 80%;
+    position: relative;
+    @include box-shadow(0 0 30px rgba(0,0,0,0.1));
+    @include rounded-corner(10px);
+    @include flex(space-between);
+    .item{
+      margin: 15px;
+      width: 40%;
+      @include flex(center,center,column);
+      color: $text-color-light;
+      .time{
+        font-size: $font-size-tiny;
+        font-weight: bold;
+        color: $primary-color;
+      }
+    }
+  }
+  .discount-info{
+    position: fixed;
+    bottom: $nav-height;
+    left: 0;
+    right:0;
+    background: white;
+    color: $text-color-light;
+    font-size: $font-size-small;
+    padding: 10px 0 0 35px;
+    .price{
+      color: $brand-color;
+      font-weight: bold;
+    }
+  }
+  .ad-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 40px);
+    height: $nav-height;
+    padding: 0 20px;
+    background: white;
+    @include flex(space-between, center);
+
+    .price-info{
+      @include flex(flex-start,center);
+      .cur-price{
+        color: $brand-color;
+        font-weight: bold;
+        font-size: $font-size-large;
+        margin-right: 15px;
+      }
+      .origin-price{
+        color: $text-color-light;
+        font-size: $font-size-small;
+        &:after{
+          content: '';
+          border-bottom: 1px solid $text-color-light;
+        }
+      }
+    }
+    .footer-item{
+      width: 50%;
+      .button{
+        margin: 0 10px;
+        padding: 0;
+      }
+      .price{
+        margin-left: 10px;
+        font-weight: bold;
+        font-size: $font-size-small;
+      }
+      .origin-price {
+        opacity: 0.4;
+        font-size: $font-size-tiny;
+        margin-left: 10px;
+        position: relative;
+        &:after{
+          content: '';
+          position: absolute;
+          right: -6px;
+          top: 8px;
+          width: calc(100% + 12px);
+          border-bottom: 1px solid rgba(255,255,255,0.5);
+        }
+      }
+    }
+    .buy-btn{
+      width: 100px;
+    } 
+    .buy-btn-sm{
+      width: 45px;
+      margin-left: 10px; 
+    }
+    .buy-container{
+      @include flex(flex-start)
+    }
+  }
+}

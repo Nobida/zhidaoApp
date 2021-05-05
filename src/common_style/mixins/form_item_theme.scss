@@ -1,0 +1,7 @@
+@mixin form-item-theme{
+  .form-item{
+    .form-label{
+      color: $text-color-light;
+    }
+  }
+}

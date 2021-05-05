@@ -1,0 +1,29 @@
+.tag-item{
+  background: $brand-color;
+  color: $white;
+  font-size: $font-size-small;
+  padding: 4px 12px;
+  margin-right: 5px;
+  @include rounded-corner(20px);
+  @include flex(center,center);
+  &.info{
+    background: $brand-info;
+  }
+
+  &.primary{
+    background: $primary-color;
+  }
+
+  &.optional{  
+    background: $brand-light;
+  }
+  &.sm{
+    font-size: $font-size-tiny - 1px;
+    padding: 2px 9px;
+  }
+  &.lg{
+    font-size: $font-size-base;
+    padding: 5px 14px;
+  }
+
+}

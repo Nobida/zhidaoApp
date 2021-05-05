@@ -1,0 +1,12 @@
+.empty{
+  width:100%;
+  min-height: 400px;
+  @include flex(center,center,column);
+  color: $text-color-light;
+
+  svg{
+    width: 60px;
+    fill: $text-color-lighter;
+    margin-bottom: 20px;
+  }
+}

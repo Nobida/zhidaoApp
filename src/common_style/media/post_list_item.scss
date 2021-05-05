@@ -1,0 +1,49 @@
+.post-list-item{
+    margin: $note-list-item-margin 0;
+    padding: $note-list-item-padding;
+
+    .item-head{
+       margin-bottom: 10px;
+       @include flex(space-between,center);
+       .user-info{
+         @include flex(flex-start,center);
+       }
+       .nickname{
+         margin-left: 5px;
+         font-size: $font-size-small;
+         color: $text-color-light;
+       }
+       .time{
+         font-size: $font-size-small;
+         color: $text-color-lighter;
+       }
+    }
+
+    .title{
+      font-size: $font-size-large;
+      font-weight: bold;
+      margin-top: 10px ;
+    }
+    .desc{
+      font-size: $note-list-item-font-size;
+    }
+    .quote{
+      color:$text-color-light;
+      font-size: $note-list-item-font-size-small;
+      font-style: italic;
+      border-left: 6px solid $text-color-lighter;
+      padding: 2px 0 2px 10px;
+    }
+  .bottom-tool{
+    width: 100%;
+    color: $text-color-lighter;
+    font-size: $font-size-small;
+    @include flex(flex-end,center);
+    .icon{
+      margin-left: 20px;
+    }
+    span{
+      margin-left: 5px;
+    }
+  }
+}

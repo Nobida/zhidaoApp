@@ -1,0 +1,47 @@
+@import '../variables.scss';
+@mixin flex($justify-content:flex-start,$align-items:flex-start,$flex-direction:row){
+  display: flex;
+  display: -webkit-flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-direction: $flex-direction;
+}
+
+@mixin rounded-corner($size:100%){
+  -webkit-border-radius: $size;
+  border-radius: $size;
+}
+
+@mixin box-shadow($box-shadow){
+  box-shadow: $box-shadow;
+  -webkit-box-shadow: $box-shadow;
+}
+@mixin base-shadow(){
+  @include box-shadow(2px 2px 20px $base-shadow-color);
+}
+@mixin light-shadow(){
+  @include box-shadow(2px 2px 20px $light-shadow-color);
+}
+@mixin dark-shadow(){
+  @include box-shadow(2px 2px 30px $dark-shadow-color);
+}
+@mixin gradient($color1,$color2){
+  background: -webkit-linear-gradient($color1,$color2); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient($color1,$color2); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient($color1,$color2); /* Firefox 3.6 - 15 */
+  background: linear-gradient($color1,$color2); /* 标准的语法 */
+}
+@mixin transition($transition){
+  transition: $transition;
+-moz-transition: $transition; /* Firefox 4 */
+-webkit-transition: $transition;
+-o-transition: $transition; /* Opera */
+}
+@mixin transform($transform){
+  transform:$transform;
+-ms-transform:$transform; 	/* IE 9 */
+-moz-transform:$transform; 	/* Firefox */
+-webkit-transform:$transform;
+-o-transform:$transform; 	/* Opera */
+}
+

@@ -1,0 +1,23 @@
+@mixin gift-theme {
+
+    .gift-container {
+      background: $bg-color;
+      color: $text-color;
+      .send-words {
+        border: 1px solid $text-color-lighter;
+      }
+      .send-words:focus {
+        border: 2px solid $primary-color;
+      }
+
+    }
+  .info{
+    color: $text-color-light;
+  }
+  .gift-item{
+
+    .status{
+      background: darken($bg-color,10);
+    }
+  }
+}

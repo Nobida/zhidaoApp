@@ -1,0 +1,13 @@
+@import "../../common_style/variables";
+.course{
+  .fixed-head{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .course-content{
+    margin-top: $nav-height;
+    min-height: 200px;
+  }
+}

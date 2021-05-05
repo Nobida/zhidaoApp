@@ -1,0 +1,47 @@
+/* sets positioning */
+.arrow {
+	width: 16px;
+	height: 62px;
+	position: absolute;
+	left: 50%;
+	margin-left: -8px;
+	bottom: 20px;
+}
+
+/* sets arrow style */
+.arrow path {
+	stroke: #fff;
+	fill: transparent;
+	stroke-width: 3px;	
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow{
+0% {opacity:0}
+25% {opacity:1}
+75% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow{
+0% {opacity:0}
+25% {opacity:1}
+75% {opacity:0}
+100% {opacity:0}
+}
+
+.arrow path.a1{
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; 
+}
+
+.arrow path.a2{
+	animation-delay:-.5s;
+	-webkit-animation-delay:-.5s;
+}
+
+.arrow path.a3{	
+	animation-delay:0s;
+	-webkit-animation-delay:0s;
+}

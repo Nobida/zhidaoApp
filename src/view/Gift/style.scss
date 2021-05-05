@@ -1,0 +1,46 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+.gift{
+  height: 100%;
+  .tab-fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 500;
+  }
+  .gift-container{
+    padding: $padding-large-horizontal $padding-base-vertical;
+    padding-top: $nav-height + 20px;
+    .send-words{
+      width: 100%;
+      border: 1px solid $text-color-lighter;
+    }
+    .send-words:focus{
+      border: 2px solid $primary-color;
+    }
+  }
+  .btn-groups{
+    margin: 20px 0;
+    @include flex(flex-end);
+    .button{
+      display: inline-block;
+      margin-left: 20px;
+    }
+  }
+  .info{
+    font-size: $font-size-small;
+    color: $text-color-light;
+  }
+  .gift-item{
+    @include flex(space-between);
+    margin: 10px 0;
+    .status{
+      border-radius: 10px;
+      font-size: 12px;
+      background: darken($bg-color,10);
+      padding: 3px 5px;
+      @include flex(center,center);
+    }
+  }
+}

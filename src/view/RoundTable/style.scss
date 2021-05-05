@@ -1,0 +1,12 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+.round-tables{
+  padding: $padding-base-horizontal;
+  .round-table-card{
+    .desc{
+      font-size: $font-size-small;
+    }
+  }
+
+
+}

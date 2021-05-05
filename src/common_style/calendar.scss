@@ -1,0 +1,147 @@
+.clndr-head{
+    @include flex(space-between,center);
+    background: $calendar-head-bg;
+    color: $primary-color;
+    font-size: $font-size-small;
+    padding: 0 $calendar-content-padding;
+    height: $calendar-line-height;
+    border-bottom: 1px solid $split-line-color;
+    @include transition(all .2s);
+
+    div{
+        width: $calendar-item-size;
+        height: $calendar-item-size;
+        font-size: $font-size-small;
+        text-align: center;
+        line-height: $calendar-item-size;
+      }
+
+  }
+
+
+.clndr-head-fix{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  @include box-shadow(0px 2px 5px rgba(0,0,0,0.1));
+}
+
+
+.clndr{
+
+
+  .month{
+      line-height: $calendar-line-height + 10px;
+      margin: 10px 0;
+      font-size: $font-size-small;
+      font-family: $font-family-en;
+      text-align: center;
+    }
+
+
+  .clndr-table{
+      width: 100%;
+      background: $calendar-bg;
+
+        tr{
+          padding:0  $calendar-content-padding;
+          @include flex(space-between,center);
+          height: $calendar-line-height;
+          text-align: left;
+        }
+        .adjacent-month{
+          visibility: hidden;
+        }
+        .day{
+          width: $calendar-item-size;
+          height: $calendar-item-size;
+          font-size: $font-size-small;
+          text-align: center;
+          line-height: $calendar-item-size;
+          color: $text-color-lighter;
+          font-weight: 200;
+          @include rounded-corner(100%);
+          font-family: $font-family-en;
+          &.today{
+            box-shadow: 0 0 8px rgba(137,172,128,0.1);
+          }
+          &.late{
+            color: $calendar-late-color;
+            font-weight: bold;
+          }
+          &.not_come{
+            color: $calendar-future-color;
+            font-weight: bold;
+          }
+          &.finished{
+            color: $calendar-finished-color;
+            font-weight: bold;
+          }
+          &.not_finished{
+            color: $calendar-not-finished-color;
+            font-weight: bold;   
+          }
+        }
+        .selected{
+          width: $calendar-item-size;
+          height: $calendar-item-size ;
+          line-height: $calendar-item-size;
+          font-size: $font-size-small;
+          text-align: center;
+          color: $white;
+          font-family: $font-family-en;
+          @include box-shadow(0 0 5px rgba(0,0,0,0.2));
+          @include rounded-corner(100%);
+          &.late{
+            background: $calendar-late-color;
+          }
+          &.finished{
+            background: $calendar-finished-color;
+          }
+          &.not_finished{
+            background: $calendar-not-finished-color;
+            color: $white;
+          }
+          &.not_come{
+            background: $calendar-future-color;
+          }
+        }
+        .highlight{
+          @extend .day;
+          border: 1px solid #ddd;
+          font-weight: bold;
+          &.finished{
+           border: 1px solid lighten($calendar-finished-color,35);
+          }
+          &.late{
+           border: 1px solid lighten($calendar-late-color,15);
+          }
+          /*
+          width: $calendar-item-size;
+          height: $calendar-item-size ;
+          line-height: $calendar-item-size;
+          font-size: $font-size-small;
+          text-align: center;
+          color: $white;
+          font-family: $font-family-en;
+          @include box-shadow(0 0 5px rgba(0,0,0,0.2));
+          @include rounded-corner(100%);
+          &.late{
+           // background: $calendar-late-color;
+          }
+          &.finished{
+            background: $calendar-finished-color;
+          }
+          &.not_finished{
+            background: $calendar-not-finished-color;
+            color: $white;
+          }
+          &.not_come{
+            background: $calendar-future-color;
+          }
+          */
+        }
+    }
+}
+

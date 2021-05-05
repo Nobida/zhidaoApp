@@ -1,0 +1,20 @@
+@import "../../view/App/theme_style";
+@import "../../view/ReadingProgress/theme_style";
+@import "../../view/Home/theme_styles";
+@import "../../view/User/theme_style";
+@import "../../view/Quiz/theme_style";
+@import "../../view/Note/theme_style";
+@import "../../view/Question/theme_style";
+@import "../../view/Post/theme_style";
+@import "../../view/Gift/theme_style";
+@mixin view-theme(){
+  @include app-theme;
+  @include reading-progress-theme;
+  @include home-theme;
+  @include user-theme;
+  @include quiz-theme;
+  @include note-theme;
+  @include question-theme;
+  @include post-theme;
+  @include gift-theme;
+}

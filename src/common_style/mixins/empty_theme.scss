@@ -1,0 +1,8 @@
+@mixin empty-theme(){
+  .empty{
+    color: $text-color-light;
+    svg{
+      fill: $text-color-lighter;
+    }
+  }
+}

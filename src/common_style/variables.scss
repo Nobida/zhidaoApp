@@ -1,0 +1,309 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+// == Colors
+//
+// Base color name definition
+
+$dark :                 #333333 !default;
+$grey-dark:             #555555 !default;
+$grey:                  #999999 !default;
+$grey-medium:           #cccccc !default;
+$grey-light:            #dddddd !default;
+$grey-lighter:          #f2f2f2 !default;
+$white:                 #fff !default;
+$sandy-brown:           #ceaf9b !default;
+$steel-blue:            #7ea1af !default;
+$brand-color:           #50a39b !default;
+$brand-light:           #7FC9C2 !default;
+$bottom-column-color:   #2C3938FF !default;
+
+$default-color:         #333333 !default;
+$primary-color:         #333333 !default;
+$secondary-color:       $sandy-brown !default;
+$third-color:           $steel-blue !default;
+$brand-success:         $brand-color !default;
+$brand-info:            $sandy-brown !default;
+$brand-warning:         $grey !default;
+
+$base-shadow-color:     rgba(48,88,104,0.27);
+$light-shadow-color:    rgba(107,83,50,0.18);
+$dark-shadow-color:     rgba(107,83,50,0.62);
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$bg-color:                  #fff !default;
+$bg-dark:                   #fff !default;
+$bg-light:                  $grey-lighter !default;
+
+//** Global text color on `<body>`.
+$text-color:                $grey-dark !default;
+$text-color-light:          $grey !default;
+$text-color-lighter:        $grey-medium !default;
+$text-color-inverse:        $white !default;
+$text-color-inverse-light:  $grey !default;
+
+//** Global textual link color.
+$link-color:                $primary-color !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:          darken($link-color, 15%) !default;
+//** Link hover decoration.
+$link-hover-decoration:     underline !default;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:  "Hiragino Sans GB","PingFang SC", "STHeiti","LiHei Pro Light","STXihei","Heiti SC","Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:        $font-family-sans-serif !default;
+
+//** Default English fonts for calendar
+$font-family-en:         "Hiragino Sans GB","PingFang SC", "STHeiti","LiHei Pro Light","STXihei","Heiti SC","Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-en-bold:      "Hiragino Sans GB","PingFang SC", "STHeiti","LiHei Pro Light","STXihei","Heiti SC","Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+$font-size-base:          16px !default;
+$font-size-large:         1.12rem !default; // ~18px
+$font-size-small:         0.87rem !default; // ~14px
+$font-size-tiny:          ceil(($font-size-base * 0.75)) !default; // ~12px
+
+$font-size-h1:            1.5rem !default; // ~24px
+$font-size-h2:            1.25rem !default; // ~20px
+$font-size-h3:            1.12rem !default; // ~18px
+$font-size-h4:            $font-size-base !default; // ~16px
+$font-size-h5:            0.87rem $font-size-base !default;
+$font-size-h6:            0.75rem !default; // ~12px
+$base-font-weight:        500 !default;
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        1.8 !default; // 28/16
+$line-height-large:       2 !default;
+$line-height-small:       1.5 !default;
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~28px
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family:    inherit !default;
+$headings-font-weight:    500 !default;
+$headings-line-height:    1.2 !default;
+$headings-color:          inherit !default;
+$headings-small-color:          inherit !default;
+
+$padding-base-vertical:     20px !default;
+$padding-base-horizontal:   20px !default;
+
+$padding-large-vertical:    25px !default;
+$padding-large-horizontal:  25px !default;
+
+$padding-small-vertical:    15px !default;
+$padding-small-horizontal:  15px !default;
+
+$padding-xs-vertical:       5px !default;
+$padding-xs-horizontal:     5px !default;
+
+
+$border-radius-base:        4px !default;
+$border-radius-large:       6px !default;
+$border-radius-small:       3px !default;
+
+//== UL
+$ul-padding-left:           1em;
+
+//== Button
+//
+$button-height-large:       45px;
+$button-height-middle:      38px;
+$button-height-small:       30px;
+$button-font-size-large:    16px;
+$button-font-size-middle:   14px;
+$button-font-size-small:    12px;
+$button-padding-small:      15px;
+$button-padding-middle:     25px;
+$button-padding-large:      32px;
+$button-color:              $white;
+$button-bg:                 $brand-success;
+$button-shadow:             $base-shadow-color;
+$button-inverse-color:      $primary-color;
+$button-inverse-bg:         $white;
+$button-ghost-color:        $brand-success;
+$button-ghost-border-color: lighten($brand-success,30);
+
+//== IconButton
+$icon-button-size:          50px;
+$icon-button-icon-size:      18px;
+$icon-button-background:    $primary-color;
+$icon-button-icon-color:    $bg-color;
+$icon-button-size-sm:       40px;
+$icon-button-icon-size-sm:  15px;
+$icon-button-size-lg:       60px;
+$icon-button-icon-size-lg:  20px;
+$icon-button-size-xs:       30px;
+$icon-button-icon-size-xs:  12px;
+
+//== BottomNav
+//
+$nav-height:        60px;
+$nav-bg:            $bg-dark;
+$nav-icon-size:     20px;
+$nav-label-size:    12px;
+$nav-label-color:   $text-color-lighter;
+$nav-active-color:  $primary-color;
+$nav-z-index:        1000;
+$nav-ripple-color:  rgba(0,0,0,0.1);
+$nav-icon-color:    $primary-color;
+
+//== Ripple
+$ripple-color-base:     rgba(0,0,0,0.1);
+$ripple-color-inverse:  rgba(255,255,255,0.1);
+
+//== Icon
+//
+$icon-size-base:       25px;
+$icon-size-large:      30px;
+$icon-size-small:      20px;
+$icon-size-tiny:       15px;
+$icon-label-size:      10px;
+$icon-label-color:     $text-color-lighter;
+$icon-color:           $primary-color;
+
+//== Calendar
+//
+$calendar-head-height:        40px;
+$calendar-bg:                 $bg-color;
+$calendar-head-bg:            $bg-dark;
+$calendar-content-padding:    25px;
+$calendar-item-size:          32px;
+$calendar-line-margin:        20px;
+$calendar-line-height:        44px;
+$calendar-future-color:       $text-color-lighter;
+$calendar-finished-color:     $brand-success;
+$calendar-late-color:         $sandy-brown;
+$calendar-not-finished-color: $brand-warning;
+
+//== Split Line
+//
+$split-line-color:    $grey-lighter;
+$split-line-color-inverse:    #444;
+
+//== BookInfo Item
+//
+$book-item-width: 80px;
+$book-item-height: $book-item-width*1.4;
+$book-item-padding: 0 10px;
+$book-item-round-size: 80px;
+
+//== BookPage
+//
+$book-page-font-size-h1:            1.5em !default; // ~24px
+$book-page-font-size-h2:            1.3em !default; // ~20px
+$book-page-font-size-h3:            1.12em !default; // ~18px
+$book-page-font-size-h4:            1.12em !default; // ~16px
+$book-page-font-size-h5:            1.12em !default;
+$book-page-font-size-h6:            1.12em !default; // ~12px
+$book-page-headings-font-weight:    bold !default;
+$book-page-heading-color:           $brand-color !default;
+$book-page-line-height-base:        1.8;
+$book-page-poem-vn-size:            0.87em;
+$book-page-font-size-small:         0.87em;
+$book-page-font-size-large:         1.12em;
+$book-page-footnote-mark-size:      20px;
+$book-page-footnote-mark-content-size:   16px;
+$book-page-footnote-mark-font-size: 12px;
+$book-page-highlight-color:         rgba(0,0,0,0.2);
+$book-page-note-highlight-color:    $grey-light;
+$book-page-mark-bg:                 $primary-color;
+$book-page-mark-color:              $text-color-inverse;
+$book-page-color:                   $text-color;
+$book-page-comment-padding:         20px;
+$book-page-scroll-tool-width:       35px;
+$book-page-scroll-tool-height:      90px;
+$book-page-scroll-tool-opacity:     0.75;
+$book-page-speak-left-bg:           $brand-color;
+$book-page-speak-right-bg:          $grey-lighter;
+$book-page-speak-left-color:        $white;
+$book-page-speak-right-color:       $text-color;
+
+
+//== Drawer
+//
+$drawer-bg:                $bg-dark;
+$drawer-width-base:        250px;
+$drawer-width-large:       300px;
+$drawer-width-small:       200px;
+$drawer-height-base:       250px;
+$drawer-height-large:      300px;
+$drawer-height-small:      200px;
+$drawer-overlay-bg:        rgba(255,255,255,0.5);
+
+//== Tabs
+//
+$tab-height:              55px;
+$tab-bg:                  $white;
+$tab-active-color:        $primary-color;
+$tab-color:               $text-color-light;
+$tab-font-size:           $font-size-base;
+$tab-padding-horizontal:  40px;
+$tab-line-weight:         3px;
+$tab-line-width:          50px;
+$tab-item-min-width:      80px;
+
+//== LabelTabs
+$label-tab-item-min-width:      60px;
+
+//== Panel Selection
+//
+$panel-selection-padding:       $padding-large-vertical;
+$panel-selection-item-margin:   15px;
+
+//== Avatar
+//
+$avatar-size-tiny:      20px;
+$avatar-size-small:     30px;
+$avatar-size-middle:    40px;
+$avatar-size-big:       60px;
+$avatar-size-large:     80px;
+
+//== NoteList
+//
+$note-list-item-margin:     5px;
+$note-list-item-padding:    10px;
+$note-list-item-font-size:  $font-size-base;
+$note-list-item-font-size-small:  $font-size-small;
+$note-list-item-font-size-tiny:  $font-size-tiny;
+
+//== Toast
+//
+$toast-bg:        rgba(0,0,0,0.5);
+$toast-height:    35px;
+$toast-icon-size: 18px;
+
+//== Form
+//
+$form-label-font-size:    $font-size-base;
+$form-font-size:          $font-size-base;
+//== TextField
+$text-field-line-color:   $text-color-lighter;
+
+//== Media
+$media-img-size:           80px;
+$media-title-font-size:    $font-size-base;
+$media-desc-font-size:     $font-size-small;
+$media-item-margin:        25px;
+$media-info-margin-left:   15px;
+
+//== Card
+$card-height:              140px;
+$card-mask-color:          rgba(140,130,126,0.4);
+$card-height-small:        120px;
+$card-height-large:        180px;
+
+//== Switch
+$switch-width:             65px;
+$switch-height:            30px;
+$switch-disable-color:     $split-line-color;

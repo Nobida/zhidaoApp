@@ -1,0 +1,193 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+$theme-green: #c0d6bd;
+$theme-yellow: #d3d0bc;
+.reading{
+  height:100%;
+  max-width: 700px;
+  margin: 0 auto;
+  .header{
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $bg-color;
+    z-index: 800;
+    @include box-shadow(0 2px 10px rgba(0,0,0,0.1));
+    @include flex(space-between,center);
+    .left{
+      margin-left: 30px;
+      cursor: pointer;
+    }
+    .right{
+      margin-right: 30px;
+      cursor: pointer;
+    }
+  }
+  .tabs{
+    position: absolute;
+    width:100%;
+    top: 0;
+  }
+  .book-page-slide-container{
+    width: 100%;
+    height: 100% !important;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    .read-button{
+      margin: $padding-large-vertical $padding-large-horizontal;
+    }
+  }
+  .setting-container{
+    //height: 150px;
+    padding-bottom: $nav-height;
+  }
+  .note-info-container{
+
+    padding-top: 30px;
+    padding-bottom: $nav-height+20px;
+    // padding-top: 30px;
+    position: relative;
+    .highlight-content{
+      margin: 0 20px;
+      max-height: 200px;
+      overflow: scroll;
+    }
+  }
+  .delete-note-container{
+    padding-top: 30px;
+    padding-bottom: $nav-height;
+    .delete-content{
+      margin: 0 20px;
+      max-height: 200px;
+      overflow: scroll;
+    }
+    .button-tools{
+      @include flex(flex-end)
+    }
+    .button{
+      display: inline-block;
+      margin: 10px;
+    }
+  }
+  .selection-tools{
+    z-index: 2000;
+  }
+  .share-btn{
+    position: fixed;
+    bottom:  $nav-height + 160px;
+    right:  20px;
+    z-index: 2000;
+  }
+  .note-btn{
+    position: fixed;
+    bottom:  $nav-height + 20px;
+    right:  20px;
+    z-index: 2000;
+  }
+  .question-btn{
+    position: fixed;
+    bottom:  $nav-height + 90px;
+    right:  20px;
+    z-index: 2000;
+  }
+  .close-btn{
+     position: fixed;
+    bottom:  $nav-height + 230px;
+    right:  20px;
+    z-index: 2000;
+
+  } 
+  .sign-footer-unicom{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3000;
+    background: white;
+    .fetchMoreClasses{
+      height: 100%;
+      background: $brand-color;
+      margin: 10px 25px;
+      cursor: pointer;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+  }
+  .share-lead{
+    @include flex(center,center);
+
+    .lead-img{
+      border-radius: 10px;
+      width: 247px;
+      height: 269px;
+      background: $brand-color;
+      .qr-above-part{
+        height: 30px;
+        font-size: 19px;
+        margin-top: 30px;
+        font-family: serif;
+        
+        .qr-title{
+          width: 134px;
+          margin-left: 55px;
+          margin-top: 20px;
+          text-align: center;
+          border-left: 2px solid white;
+          border-right: 2px solid white;
+          line-height: 0em;
+          img{
+            width: 85px;
+            height: 19px;
+          }
+        }
+      }
+      .qr-code{
+        height: 151px;
+        display: -webkit-flex;
+        justify-content: center;
+        img{
+          width: 134px;
+          height: 134px;
+          border-radius: 5px;
+        }
+      }
+      .qr-below-part{
+        height: 67px;
+        background: white;
+        color: $brand-color;
+        font-size: 14px;
+        text-align: center;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        .qr-triangle{
+            width:0px;
+            height:0px;
+            border-top:10px solid transparent;
+            border-right:10px solid transparent;
+            border-bottom:10px solid $brand-color;
+            border-left:10px solid transparent;
+            margin-left: 115px;
+            margin-bottom: 8px;
+        }
+      }
+    }
+  }
+  .sign-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    padding: 0 40px;
+    z-index: 3000;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+  }
+
+}
+

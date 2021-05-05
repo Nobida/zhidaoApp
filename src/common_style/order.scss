@@ -1,0 +1,23 @@
+.order{
+  background: $grey-lighter;
+  padding-top: 0px;
+  width: 100%;
+  margin-bottom: 20px;
+  @include box-shadow(0px 3px 15px rgba(0,0,0,0.1));
+  @include flex(flex-start,flex-start,column);
+  .store-item-container{
+    background: $white;
+    width: 100%;
+    display: block;
+  }
+  .store-list-item{
+    margin:15px;
+  }
+  .info-container{
+    padding: 15px;
+  }
+  .price,.status,.create-dt{
+      font-size: $font-size-small;
+  }
+
+}

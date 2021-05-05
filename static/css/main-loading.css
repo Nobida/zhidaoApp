@@ -1,0 +1,1284 @@
+#main-loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+  width: 100%;
+  height: 100%;
+  background: #111;
+    font-size: 12px;
+    z-index: 2000;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes starAnim {
+    0% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-2000px);
+        -webkit-transform: translateY(-2000px);
+        -moz-transform: translateY(-2000px);
+        -o-transform: translateY(-2000px);
+    }
+}
+.fade-in{
+    -webkit-animation: fadeIn .5s ;
+    animation: fadeIn .5s ;
+}
+.fade-out{
+    -webkit-animation: fadeOut .5s .2s;
+    animation: fadeOut .5s .2s;
+}
+
+#logo{
+    position: absolute;
+    width: 40px;
+    left: 50%;
+    margin-left: -20px;
+    bottom: 50px;
+}
+#load {
+  position:absolute;
+  width:600px;
+  height:36px;
+  left:50%;
+  top:50%;
+  margin-top: -20px;
+  margin-left:-300px;
+  overflow:visible;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  cursor:default;
+}
+
+#load div {
+  position:absolute;
+  width:20px;
+  height:36px;
+  opacity:0;
+  font-family:Helvetica, Arial, sans-serif;
+  animation:move 2s linear infinite;
+  -o-animation:move 2s linear infinite;
+  -moz-animation:move 2s linear infinite;
+  -webkit-animation:move 2s linear infinite;
+  transform:rotate(180deg);
+  -o-transform:rotate(180deg);
+  -moz-transform:rotate(180deg);
+  -webkit-transform:rotate(180deg);
+  color:#fff;
+}
+
+#load div:nth-child(2) {
+  animation-delay:0.2s;
+  -o-animation-delay:0.2s;
+  -moz-animation-delay:0.2s;
+  -webkit-animation-delay:0.2s;
+}
+#load div:nth-child(3) {
+  animation-delay:0.4s;
+  -o-animation-delay:0.4s;
+  -webkit-animation-delay:0.4s;
+  -webkit-animation-delay:0.4s;
+}
+#load div:nth-child(4) {
+  animation-delay:0.6s;
+  -o-animation-delay:0.6s;
+  -moz-animation-delay:0.6s;
+  -webkit-animation-delay:0.6s;
+}
+#load div:nth-child(5) {
+  animation-delay:0.8s;
+  -o-animation-delay:0.8s;
+  -moz-animation-delay:0.8s;
+  -webkit-animation-delay:0.8s;
+}
+#load div:nth-child(6) {
+  animation-delay:1s;
+  -o-animation-delay:1s;
+  -moz-animation-delay:1s;
+  -webkit-animation-delay:1s;
+}
+#load div:nth-child(7) {
+  animation-delay:1.2s;
+  -o-animation-delay:1.2s;
+  -moz-animation-delay:1.2s;
+  -webkit-animation-delay:1.2s;
+}
+
+.text-container{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-loading{
+    width: 200px;
+    opacity: 0.8;
+}
+
+@keyframes move {
+  0% {
+    left:0;
+    opacity:0;
+  }
+	35% {
+		left: 41%;
+		-moz-transform:rotate(0deg);
+		-webkit-transform:rotate(0deg);
+		-o-transform:rotate(0deg);
+		transform:rotate(0deg);
+		opacity:1;
+	}
+	65% {
+		left:59%;
+		-moz-transform:rotate(0deg);
+		-webkit-transform:rotate(0deg);
+		-o-transform:rotate(0deg);
+		transform:rotate(0deg);
+		opacity:1;
+	}
+	100% {
+		left:100%;
+		-moz-transform:rotate(-180deg);
+		-webkit-transform:rotate(-180deg);
+		-o-transform:rotate(-180deg);
+		transform:rotate(-180deg);
+		opacity:0;
+	}
+}
+
+@-moz-keyframes move {
+	0% {
+		left:0;
+		opacity:0;
+	}
+	35% {
+		left:41%;
+		-moz-transform:rotate(0deg);
+		transform:rotate(0deg);
+		opacity:1;
+	}
+	65% {
+		left:59%;
+		-moz-transform:rotate(0deg);
+		transform:rotate(0deg);
+		opacity:1;
+	}
+	100% {
+		left:100%;
+		-moz-transform:rotate(-180deg);
+		transform:rotate(-180deg);
+		opacity:0;
+	}
+}
+
+@-webkit-keyframes move {
+	0% {
+		left:0;
+		opacity:0;
+	}
+	35% {
+		left:41%;
+		-webkit-transform:rotate(0deg);
+		transform:rotate(0deg);
+		opacity:1;
+	}
+	65% {
+		left:59%;
+		-webkit-transform:rotate(0deg);
+		transform:rotate(0deg);
+		opacity:1;
+	}
+	100% {
+		left:100%;
+		-webkit-transform:rotate(-180deg);
+		transform:rotate(-180deg);
+		opacity:0;
+	}
+}
+
+@-o-keyframes move {
+	0% {
+		left:0;
+		opacity:0;
+	}
+	35% {
+		left:41%;
+		-o-transform:rotate(0deg);
+		transform:rotate(0deg);
+		opacity:1;
+	}
+	65% {
+		left:59%;
+		-o-transform:rotate(0deg);
+		transform:rotate(0deg);
+		opacity:1;
+	}
+	100% {
+		left:100%;
+		-o-transform:rotate(-180deg);
+		transform:rotate(-180deg);
+		opacity:0;
+	}
+}
+
+#stars1{
+    animation: starAnim 80s infinite;
+    opacity: 0.4;
+}
+#stars2{
+    animation: starAnim 140s infinite;
+    opacity: 0.5;
+}
+#stars3{
+    animation: starAnim 200s infinite;
+    opacity: 0.7;
+}
+#stars1 .p{
+    box-shadow: 0 0 20px rgba(255,255,255,0.6);
+    -webkit-box-shadow: 0 0 20px rgba(255,255,255,0.6);
+    -o-box-shadow: 0 0 20px rgba(255,255,255,0.6);
+    -moz-box-shadow: 0 0 20px rgba(255,255,255,0.6);
+}
+#stars2 .p{
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+    -webkit-box-shadow: 0 0 10px rgba(255,255,255,0.5);
+    -o-box-shadow: 0 0 10px rgba(255,255,255,0.5);
+    -moz-box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+#stars3 .p{
+    box-shadow: 0 0 5px rgba(255,255,255,0.1);
+}
+/* line 6, ../sass/tmp.scss */
+.p{
+  /*animation-name: flicker;
+  animation-timing-function: ease(in-out-circ);
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  */
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 1;
+    transform: scale(0.5);
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(1) {
+  animation-delay: 1.75s;
+  animation-duration: 3s;
+  left: 61vw;
+  top: 42vh;
+  height: 0.1em;
+  width: 0.1em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(2) {
+  animation-delay: 0.22222s;
+  animation-duration: 0.5s;
+  left: 61vw;
+  top: 81vh;
+  height: 0.05em;
+  width: 0.05em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(3) {
+  animation-delay: 10s;
+  animation-duration: 1s;
+  left: 46vw;
+  top: 22vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(4) {
+  animation-delay: 1.75s;
+  animation-duration: 1.5s;
+  left: 9vw;
+  top: 81vh;
+  height: 0.05em;
+  width: 0.05em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(5) {
+  animation-delay: 5s;
+  animation-duration: 1.33333s;
+  left: 12vw;
+  top: 18vh;
+  height: 0.05em;
+  width: 0.05em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(6) {
+  animation-delay: 1s;
+  animation-duration: 1.33333s;
+  left: 24vw;
+  top: 14vh;
+  height: 0.05em;
+  width: 0.05em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(7) {
+  animation-delay: 5s;
+  animation-duration: 4s;
+  left: 43vw;
+  top: 67vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(8) {
+  animation-delay: 1.5s;
+  animation-duration: 2s;
+  left: 45vw;
+  top: 21vh;
+  height: 0.15em;
+  width: 0.15em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(9) {
+  animation-delay: 0.33333s;
+  animation-duration: 3s;
+  left: 52vw;
+  top: 70vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(10) {
+  animation-delay: 0.28571s;
+  animation-duration: 2s;
+  left: 41vw;
+  top: 39vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(11) {
+  animation-delay: 0.88889s;
+  animation-duration: 2s;
+  left: 16vw;
+  top: 73vh;
+  height: 0.1em;
+  width: 0.1em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(12) {
+  animation-delay: 1.25s;
+  animation-duration: 0.66667s;
+  left: 21vw;
+  top: 7vh;
+  height: 0.05em;
+  width: 0.05em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(13) {
+  animation-delay: 1.75s;
+  animation-duration: 1s;
+  left: 22vw;
+  top: 21vh;
+  height: 0.1em;
+  width: 0.1em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(14) {
+  animation-delay: 0.75s;
+  animation-duration: 0.66667s;
+  left: 44vw;
+  top: 9vh;
+  height: 0.2em;
+  width: 0.2em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(15) {
+  animation-delay: 1.8s;
+  animation-duration: 0.5s;
+  left: 49vw;
+  top: 63vh;
+  height: 0.1em;
+  width: 0.1em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(16) {
+  animation-delay: 1.66667s;
+  animation-duration: 1s;
+  left: 75vw;
+  top: 74vh;
+  height: 0.15em;
+  width: 0.15em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(17) {
+  animation-delay: 0.28571s;
+  animation-duration: 1s;
+  left: 34vw;
+  top: 86vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(18) {
+  animation-delay: 1.16667s;
+  animation-duration: 1s;
+  left: 16vw;
+  top: 19vh;
+  height: 0.05em;
+  width: 0.05em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(19) {
+  animation-delay: 0.16667s;
+  animation-duration: 4s;
+  left: 80vw;
+  top: 67vh;
+  height: 0.1em;
+  width: 0.1em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(20) {
+  animation-delay: 1.28571s;
+  animation-duration: 1s;
+  left: 59vw;
+  top: 100vh;
+  height: 0.15em;
+  width: 0.15em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(21) {
+  animation-delay: 1.5s;
+  animation-duration: 2s;
+  left: 52vw;
+  top: 21vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(22) {
+  animation-delay: 5s;
+  animation-duration: 1s;
+  left: 6vw;
+  top: 5vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(23) {
+  animation-delay: 1s;
+  animation-duration: 2s;
+  left: 97vw;
+  top: 64vh;
+  height: 0.1em;
+  width: 0.1em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(24) {
+  animation-delay: 2.5s;
+  animation-duration: 2s;
+  left: 80vw;
+  top: 51vh;
+  height: 0.2em;
+  width: 0.2em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(25) {
+  animation-delay: 2.25s;
+  animation-duration: 0.5s;
+  left: 72vw;
+  top: 99vh;
+  height: 0.2em;
+  width: 0.2em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(26) {
+  animation-delay: 0.5s;
+  animation-duration: 4s;
+  left: 47vw;
+  top: 40vh;
+  height: 0.2em;
+  width: 0.2em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(27) {
+  animation-delay: 2.66667s;
+  animation-duration: 1s;
+  left: 38vw;
+  top: 84vh;
+  height: 0.1em;
+  width: 0.1em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(28) {
+  animation-delay: 0.83333s;
+  animation-duration: 0.5s;
+  left: 96vw;
+  top: 5vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(29) {
+  animation-delay: 2.33333s;
+  animation-duration: 1.33333s;
+  left: 47vw;
+  top: 71vh;
+  height: 0.15em;
+  width: 0.15em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(30) {
+  animation-delay: 0.6s;
+  animation-duration: 1.33333s;
+  left: 74vw;
+  top: 15vh;
+  height: 0.2em;
+  width: 0.2em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(31) {
+  animation-delay: 0.14286s;
+  animation-duration: 0.33333s;
+  left: 76vw;
+  top: 97vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(32) {
+  animation-delay: 0.125s;
+  animation-duration: 0.33333s;
+  left: 69vw;
+  top: 1vh;
+  height: 0.1em;
+  width: 0.1em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars1 .p:nth-child(33) {
+  animation-delay: 0.4s;
+  animation-duration: 4s;
+  left: 53vw;
+  top: 22vh;
+  height: 0.05em;
+  width: 0.05em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(1) {
+  animation-delay: 7s;
+  animation-duration: 0.66667s;
+  left: 5vw;
+  top: 66vh;
+  height: 0.2em;
+  width: 0.2em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(2) {
+  animation-delay: 0.14286s;
+  animation-duration: 1s;
+  left: 5vw;
+  top: 57vh;
+  height: 0.15em;
+  width: 0.15em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(3)  {
+  animation-delay: 1.25s;
+  animation-duration: 1s;
+  left: 28vw;
+  top: 68vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(4) {
+  animation-delay: 1.5s;
+  animation-duration: 2s;
+  left: 29vw;
+  top: 46vh;
+  height: 0.15em;
+  width: 0.15em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(5) {
+  animation-delay: 4.5s;
+  animation-duration: 0.5s;
+  left: 97vw;
+  top: 77vh;
+  height: 0.15em;
+  width: 0.15em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(6) {
+  animation-delay: 0.875s;
+  animation-duration: 3s;
+  left: 84vw;
+  top: 60vh;
+  height: 0.1em;
+  width: 0.1em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(7) {
+  animation-delay: 7s;
+  animation-duration: 3s;
+  left: 60vw;
+  top: 77vh;
+  height: 0.1em;
+  width: 0.1em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(8) {
+  animation-delay: 7s;
+  animation-duration: 1s;
+  left: 1vw;
+  top: 62vh;
+  height: 0.2em;
+  width: 0.2em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(9) {
+  animation-delay: 1.75s;
+  animation-duration: 0.66667s;
+  left: 90vw;
+  top: 86vh;
+  height: 0.15em;
+  width: 0.15em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(10) {
+  animation-delay: 1s;
+  animation-duration: 0.5s;
+  left: 36vw;
+  top: 99vh;
+  height: 0.2em;
+  width: 0.2em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(11) {
+  animation-delay: 3s;
+  animation-duration: 1.5s;
+  left: 96vw;
+  top: 33vh;
+  height: 0.15em;
+  width: 0.15em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(12) {
+  animation-delay: 1s;
+  animation-duration: 0.33333s;
+  left: 7vw;
+  top: 15vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(13) {
+  animation-delay: 1.28571s;
+  animation-duration: 1s;
+  left: 52vw;
+  top: 70vh;
+  height: 0.15em;
+  width: 0.15em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(14) {
+  animation-delay: 4.5s;
+  animation-duration: 2s;
+  left: 45vw;
+  top: 64vh;
+  height: 0.15em;
+  width: 0.15em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(15) {
+  animation-delay: 0.25s;
+  animation-duration: 0.33333s;
+  left: 19vw;
+  top: 21vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(16) {
+  animation-delay: 1s;
+  animation-duration: 4s;
+  left: 36vw;
+  top: 97vh;
+  height: 0.2em;
+  width: 0.2em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(17) {
+  animation-delay: 1.28571s;
+  animation-duration: 1.33333s;
+  left: 61vw;
+  top: 39vh;
+  height: 0.1em;
+  width: 0.1em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(18) {
+  animation-delay: 2.25s;
+  animation-duration: 3s;
+  left: 75vw;
+  top: 92vh;
+  height: 0.2em;
+  width: 0.2em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(19) {
+  animation-delay: 2.5s;
+  animation-duration: 4s;
+  left: 71vw;
+  top: 71vh;
+  height: 0.2em;
+  width: 0.2em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(20) {
+  animation-delay: 0.375s;
+  animation-duration: 2s;
+  left: 50vw;
+  top: 20vh;
+  height: 0.05em;
+  width: 0.05em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(21) {
+  animation-delay: 1.16667s;
+  animation-duration: 2s;
+  left: 73vw;
+  top: 66vh;
+  height: 0.15em;
+  width: 0.15em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(22) {
+  animation-delay: 3.33333s;
+  animation-duration: 4s;
+  left: 9vw;
+  top: 73vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(23) {
+  animation-delay: 1s;
+  animation-duration: 0.33333s;
+  left: 44vw;
+  top: 93vh;
+  height: 0.05em;
+  width: 0.05em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(24) {
+  animation-delay: 1.14286s;
+  animation-duration: 1.5s;
+  left: 46vw;
+  top: 27vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(25) {
+  animation-delay: 1.33333s;
+  animation-duration: 1.5s;
+  left: 46vw;
+  top: 33vh;
+  height: 0.1em;
+  width: 0.1em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(26) {
+  animation-delay: 1.25s;
+  animation-duration: 1.33333s;
+  left: 10vw;
+  top: 89vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(27) {
+  animation-delay: 0.25s;
+  animation-duration: 0.5s;
+  left: 33vw;
+  top: 92vh;
+  height: 0.2em;
+  width: 0.2em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(28) {
+  animation-delay: 1.125s;
+  animation-duration: 0.66667s;
+  left: 45vw;
+  top: 13vh;
+  height: 0.15em;
+  width: 0.15em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(29) {
+  animation-delay: 4s;
+  animation-duration: 0.33333s;
+  left: 56vw;
+  top: 32vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(30) {
+  animation-delay: 0.5s;
+  animation-duration: 0.33333s;
+  left: 62vw;
+  top: 55vh;
+  height: 0.2em;
+  width: 0.2em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(31) {
+  animation-delay: 0.71429s;
+  animation-duration: 2s;
+  left: 34vw;
+  top: 63vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(32) {
+  animation-delay: 0.875s;
+  animation-duration: 1.5s;
+  left: 14vw;
+  top: 69vh;
+  height: 0.2em;
+  width: 0.2em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars2 .p:nth-child(33) {
+  animation-delay: 0.75s;
+  animation-duration: 1s;
+  left: 76vw;
+  top: 49vh;
+  height: 0.1em;
+  width: 0.1em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(1) {
+  animation-delay: 2.25s;
+  animation-duration: 1.5s;
+  left: 16vw;
+  top: 14vh;
+  height: 0.15em;
+  width: 0.15em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(2) {
+  animation-delay: 8s;
+  animation-duration: 1s;
+  left: 61vw;
+  top: 20vh;
+  height: 0.15em;
+  width: 0.15em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(3) {
+  animation-delay: 1.42857s;
+  animation-duration: 2s;
+  left: 32vw;
+  top: 87vh;
+  height: 0.05em;
+  width: 0.05em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(4) {
+  animation-delay: 0.25s;
+  animation-duration: 4s;
+  left: 27vw;
+  top: 12vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(5) {
+  animation-delay: 0.28571s;
+  animation-duration: 1s;
+  left: 9vw;
+  top: 14vh;
+  height: 0.05em;
+  width: 0.05em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(6) {
+  animation-delay: 4s;
+  animation-duration: 0.33333s;
+  left: 14vw;
+  top: 76vh;
+  height: 0.2em;
+  width: 0.2em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(7) {
+  animation-delay: 0.5s;
+  animation-duration: 1.5s;
+  left: 3vw;
+  top: 10vh;
+  height: 0.15em;
+  width: 0.15em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(8) {
+  animation-delay: 9s;
+  animation-duration: 1s;
+  left: 63vw;
+  top: 22vh;
+  height: 0.05em;
+  width: 0.05em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(9) {
+  animation-delay: 1s;
+  animation-duration: 2s;
+  left: 22vw;
+  top: 96vh;
+  height: 0.05em;
+  width: 0.05em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(10) {
+  animation-delay: 0.57143s;
+  animation-duration: 1s;
+  left: 5vw;
+  top: 82vh;
+  height: 0.15em;
+  width: 0.15em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(11) {
+  animation-delay: 1.5s;
+  animation-duration: 0.66667s;
+  left: 38vw;
+  top: 72vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(12) {
+  animation-delay: 1.14286s;
+  animation-duration: 3s;
+  left: 100vw;
+  top: 63vh;
+  height: 0.15em;
+  width: 0.15em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(13) {
+  animation-delay: 0.66667s;
+  animation-duration: 2s;
+  left: 24vw;
+  top: 88vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(14) {
+  animation-delay: 1s;
+  animation-duration: 1.33333s;
+  left: 26vw;
+  top: 48vh;
+  height: 0.1em;
+  width: 0.1em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(15) {
+  animation-delay: 0.71429s;
+  animation-duration: 1.5s;
+  left: 55vw;
+  top: 1vh;
+  height: 0.1em;
+  width: 0.1em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(16) {
+  animation-delay: 2.25s;
+  animation-duration: 1.33333s;
+  left: 33vw;
+  top: 92vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(17) {
+  animation-delay: 0.85714s;
+  animation-duration: 0.66667s;
+  left: 80vw;
+  top: 1vh;
+  height: 0.2em;
+  width: 0.2em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(18) {
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  left: 64vw;
+  top: 37vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(19) {
+  animation-delay: 1.42857s;
+  animation-duration: 0.5s;
+  left: 8vw;
+  top: 16vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(20) {
+  animation-delay: 0.4s;
+  animation-duration: 1.33333s;
+  left: 38vw;
+  top: 85vh;
+  height: 0.2em;
+  width: 0.2em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(21) {
+  animation-delay: 1.28571s;
+  animation-duration: 1.5s;
+  left: 40vw;
+  top: 76vh;
+  height: 0.05em;
+  width: 0.05em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(22) {
+  animation-delay: 1.6s;
+  animation-duration: 0.5s;
+  left: 20vw;
+  top: 44vh;
+  height: 0.15em;
+  width: 0.15em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(23) {
+  animation-delay: 0.71429s;
+  animation-duration: 1s;
+  left: 52vw;
+  top: 87vh;
+  height: 0.15em;
+  width: 0.15em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(24) {
+  animation-delay: 2.25s;
+  animation-duration: 0.33333s;
+  left: 55vw;
+  top: 34vh;
+  height: 0.05em;
+  width: 0.05em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(25) {
+  animation-delay: 0.75s;
+  animation-duration: 0.33333s;
+  left: 12vw;
+  top: 16vh;
+  height: 0.2em;
+  width: 0.2em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(26) {
+  animation-delay: 1.11111s;
+  animation-duration: 0.66667s;
+  left: 88vw;
+  top: 27vh;
+  height: 0.1em;
+  width: 0.1em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(27) {
+  animation-delay: 2s;
+  animation-duration: 1s;
+  left: 26vw;
+  top: 56vh;
+  height: 0.05em;
+  width: 0.05em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(28) {
+  animation-delay: 4s;
+  animation-duration: 0.5s;
+  left: 83vw;
+  top: 78vh;
+  height: 0.1em;
+  width: 0.1em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(29) {
+  animation-delay: 4.5s;
+  animation-duration: 0.66667s;
+  left: 19vw;
+  top: 25vh;
+  height: 0.2em;
+  width: 0.2em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(30) {
+  animation-delay: 0.14286s;
+  animation-duration: 1s;
+  left: 91vw;
+  top: 65vh;
+  height: 0.05em;
+  width: 0.05em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(31) {
+  animation-delay: 1s;
+  animation-duration: 1s;
+  left: 72vw;
+  top: 92vh;
+  height: 0.2em;
+  width: 0.2em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(32) {
+  animation-delay: 4.5s;
+  animation-duration: 2s;
+  left: 95vw;
+  top: 56vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+/* line 20, ../sass/tmp.scss */
+#stars3 .p:nth-child(33) {
+  animation-delay: 2.25s;
+  animation-duration: 1s;
+  left: 36vw;
+  top: 65vh;
+  height: 0.25em;
+  width: 0.25em;
+}
+
+@keyframes flicker {
+  to {
+    opacity: 0.25;
+  }
+}

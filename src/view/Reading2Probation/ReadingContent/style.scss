@@ -1,0 +1,163 @@
+@import "../../../common_style/variables";
+@import "../../../common_style/mixins";
+.reading-content{
+  $page-card-header-height-with-banner: 140px;
+  .lesson-name{
+    color: $text-color-lighter;
+    font-size: $font-size-tiny;
+    margin: 20px;
+  }
+  .page-name{
+    margin: 20px;
+    padding-bottom: 15px;
+    color: $brand-color;
+    border-bottom: 1px solid $split-line-color;
+  }
+  .page-title{
+    font-family: $font-family-en-bold;
+    font-size: 33px;
+    margin: 60px 0;
+    position: relative;
+    height: 30px;
+    color: $brand-color;
+    line-height: 30px;
+    @include flex(center,center);
+    svg{
+      fill: $brand-color;
+      height: 30px;
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -15px;
+      margin-left: -20px;
+      width: 40px;
+      height: 1px;
+      background: $brand-color;
+    }
+  }
+  .next-btn{
+    margin: 30px 30px 10px 30px;
+  }
+  .lock-content{
+    width: 100%;
+    margin-top: 140px;
+    @include flex(center,center,column);
+    svg{
+      fill: $brand-color;
+      width: 100px;
+      margin-bottom: 10px;
+    }
+  }
+  .check-content{
+    width: 100%;
+    margin-top: 140px;
+    @include flex(center,center,column);
+    .info-icon{
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+      @include rounded-corner(100%);
+      @include flex(center,center);
+      svg{
+        width: 80px;
+        fill: white;
+      }
+      &.check{
+        background: $brand-color;
+      }
+      &.info{
+        background: $brand-color;
+      }
+    }
+    .score-rule-link{
+      color: $brand-color;
+      font-weight: bold;
+      font-size: $font-size-small;
+    }
+  }
+  .page-card-header-normal{
+    width: calc(100% - 40px);
+    margin: 30px 20px;
+    position: relative;
+    .card-name{
+      width: 100%;
+      color: $text-color-light;
+      font-size: $font-size-small;
+      text-align: center;
+    }
+    .info{
+      margin-top: 10px;
+      @include flex(space-between,center);
+    }
+    .day{
+      border-radius: 50px;
+      width: 50px;
+      padding: 2px 0;
+      font-size: 11px;
+      color: white;
+      background: $primary-color;
+      @include flex(center,center);
+    }
+    .line{
+      width: calc(100% - 80px);
+      height: 1px;
+      border-bottom: 1px solid $split-line-color;
+    }
+    .progress{
+      font-size: $font-size-tiny;
+    }
+  }
+  .page-card-header-with-banner{
+    height: $page-card-header-height-with-banner;
+    width: calc(100% - 40px);
+    margin: 30px 20px;
+    position: relative;
+    overflow: hidden;
+    @include rounded-corner(10px);
+    @include base-shadow;
+    .banner,.content{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .banner{
+      overflow: hidden;
+      @include flex(center,center,column);
+      img{
+        width: 100%;
+      }
+    }
+    .content{
+      color: white;
+      background: $card-mask-color;
+      .lesson-info{
+        margin: 20px;
+        font-size: $font-size-small;
+        @include flex(flex-start);
+      }
+      .day{
+        border-radius: 50px;
+        padding: 0 10px;
+        margin-right: 10px;
+        border: 1px solid rgba(255,255,255,0.3);
+        font-size: $font-size-tiny;
+        font-weight: bold;
+      }
+      .card-name{
+        margin: 20px;
+        font-size: $font-size-large;
+        font-weight: bold;
+      }
+      .progress{
+        margin-left: 20px;
+        font-weight: $font-size-small;
+      }
+    }
+  }
+
+
+}

@@ -1,0 +1,70 @@
+@import "mixins/component_theme";
+@import "mixins/reading_theme";
+$primary-color:             rgb(76,101,59);
+$bg-color:                  rgb(222,231,216) ;
+$bg-dark:                   rgb(222,231,216) ;
+$bg-light:                  rgb(222,231,216) ;
+
+//** Global text color on `<body>`.
+$text-color:                $primary-color;
+$text-color-light:          rgba(76,101,59,0.7) ;
+$text-color-lighter:        rgba(76,101,59,0.4) ;
+$text-color-inverse:        $white;
+$text-color-inverse-light:  $grey-light;
+$headings-color:            $primary-color;
+$headings-small-color:      $grey-light ;
+
+$split-line-color:          rgba(76,101,59,0.1);
+
+//== BottomNav
+//
+$nav-bg:            $bg-dark;
+$nav-icon-color:    $primary-color;
+
+//== Bookpage
+//
+$book-page-highlight-color:         rgba(76,101,59,0.2);
+$book-page-mark-bg:                 $primary-color;
+$book-page-mark-color:              $white;
+$book-page-color:                   rgb(53,52,24);
+$book-page-note-highlight-color:    #c1ccb8;
+$book-page-speak-left-bg:           darken($bg-color,10);
+$book-page-speak-right-bg:          $primary-color;
+$book-page-speak-left-color:        $text-color;
+$book-page-speak-right-color:       white;
+
+//== Drawer
+//
+$drawer-bg:           $bg-dark;
+$drawer-overlay-bg:   rgba(76,101,59,0.5);
+
+//== Tabs
+$tab-bg:                  none;
+$tab-active-color:        $primary-color;
+$tab-color:               $text-color-light;
+
+//== Calendar
+$calendar-bg:                 $bg-color;
+$calendar-head-bg:            $bg-dark;
+
+//== Icon
+$icon-color:                  $primary-color;
+
+//== Button
+$button-color:              $white;
+$button-bg:                 $primary-color;
+$button-inverse-color:      darken($bg-dark,5);
+$button-inverse-bg:         $white;
+$button-ghost-color:        $primary-color;
+$button-ghost-border-color: lighten($primary-color,20);
+$button-shadow:             rgba(0,0,0,0);
+
+//== IconButton
+$icon-button-background:    $primary-color;
+$icon-button-icon-color:    $white;
+
+
+.theme-green{
+  @include component-theme;
+  @include reading-theme;
+}

@@ -1,0 +1,37 @@
+@import "../../../common_style/variables";
+@import "../../../common_style/mixins";
+.reading-content{
+  .page-title{
+    font-family: $font-family-en-bold;
+    font-size: 33px;
+    margin: 60px 0;
+    position: relative;
+    height: 30px;
+    color: $brand-color;
+    line-height: 30px;
+    @include flex(center,center);
+    svg{
+      fill: $brand-color;
+      height: 30px;
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -15px;
+      margin-left: -20px;
+      width: 40px;
+      height: 1px;
+      background: $brand-color;
+    }
+  }
+  .lock-lecture{
+    width: 100%;
+    margin-top: 200px;
+    @include flex(center,center,column);
+    svg{
+      fill: $text-color-lighter;
+      width: 100px;
+    }
+  }
+}

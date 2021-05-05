@@ -1,0 +1,18 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+.register{
+  padding: $padding-large-horizontal $padding-large-vertical;
+  @include flex(center);
+  .register-container{
+    max-width: 300px;
+    min-width: 250px;
+  }
+  .warning {
+    color: red;
+    text-align: center;
+    visibility: hidden;
+  }
+  .warning.show{
+    visibility: visible;
+  }
+}

@@ -1,0 +1,114 @@
+.audio-player{
+  position: fixed;
+  bottom: 0 ;
+  left: 0;
+  padding-bottom: $nav-height;
+  width: 100%;
+  z-index: 800;
+  background: $bg-color;
+  @include base-shadow;
+
+  .time-now,.time-finish{
+    font-size: $font-size-small;
+    color: $text-color-light;
+  }
+
+  .controls{
+    @include flex(flex-start,center);
+    svg{
+      fill: $primary-color;
+    }
+    .disable{
+      svg {
+        fill: $text-color-lighter;
+      }
+    }
+    .control{
+      margin: 10px 20px;
+    }
+  }
+
+  .title{
+    font-size: $font-size-small;
+  }
+
+  #hidden-player{
+    display: none;
+  }
+  .top-container,.bottom-container{
+    @include flex(space-between,center);
+    padding: 0 20px;
+  }
+  .top-container{
+    height: 60px;
+  }
+
+  progress[value] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: calc(100% - 100px);
+      height: 6px;
+      border-radius: 50px;
+  }
+
+  progress[value]::-webkit-progress-bar {
+      background-color: #eee;
+      border-radius: 50px;
+  }
+
+  progress[value]::-webkit-progress-value {
+      border-radius: 50px;
+      background-color: $brand-color;
+  }
+  .hide-handler{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 80px;
+    background: $split-line-color;
+    @include flex(center,center);
+    svg{
+      width: 8px;
+      fill: $text-color-light;
+    }
+  }
+}
+
+.hide{
+    display: none;
+}
+
+
+.audio-player-small{
+  position: fixed;
+  z-index: 800;
+  width: 50px;
+  height: 40px;
+  right: 0;
+  background: rgba(255,255,255,0.7);
+  bottom: $nav-height+20px;
+  overflow: hidden;
+  @include rounded-corner(50px 0 0 50px);
+  @include base-shadow;
+  .hide-handler{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    background: $split-line-color;
+    @include flex(center,center);
+    @include base-shadow;
+    svg{
+      width: 8px;
+      fill: $text-color-light;
+    }
+  }
+  .play-btn-sm{
+    width: 40px;
+    height: 40px;
+    @include flex(center,center,column);
+    svg{
+      width: 8px;
+      fill: $primary-color;
+    }
+  }
+}

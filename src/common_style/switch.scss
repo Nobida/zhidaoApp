@@ -1,0 +1,21 @@
+.switch{
+  width: $switch-width;
+  height: $switch-height;
+  background: $brand-color;
+  @include box-shadow(-5px 5px 5px rgba(0,0,0,0.05) inset);
+  @include rounded-corner($switch-height);
+  .switch-handler{
+    width: $switch-height;
+    height: $switch-height;
+    background: $white;
+    @include transition(all .2s);
+    @include rounded-corner(100%);
+    @include box-shadow(0 0 10px rgba(0,0,0,0.1));
+  }
+  &.disable{
+    background: $switch-disable-color;
+    .switch-handler{
+      @include transform(translateX($switch-width - $switch-height));
+    }
+  }
+}

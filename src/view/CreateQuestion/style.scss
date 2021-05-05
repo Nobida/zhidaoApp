@@ -1,0 +1,41 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+.create-question{
+  padding:$padding-large-vertical $padding-large-horizontal;
+  .create-input{
+    margin-top: 20px;
+    width: 100%;
+    overflow: visible;
+    margin-bottom: 80px;
+  }
+  .thinking-check-container{
+    position: fixed;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    padding: 0 25px;
+    color: $text-color-light;
+    font-size: $font-size-small;
+    .thinking-check{
+      @include flex(space-between);
+      &+.thinking-check{
+        margin-top: 10px;
+      }
+    }
+  }
+  .create-bottom{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    background: $bg-color;
+    @include flex(flex-end,center);
+    .button{
+      display: inline-block;
+      margin: 20px;
+      &:first-child{
+        margin-right: 0;
+      }
+    }
+  }
+}

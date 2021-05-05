@@ -1,0 +1,24 @@
+
+@import '../../../common_style/variables';
+@import '../../../common_style/mixins';
+.retail-rules{
+    padding: 25px;
+    background: white;
+    color: $text-color-light;
+    .book-page{
+        .subtitle-l2{
+            font-weight: bold;
+            margin: 20px 0;
+            text-align: left;
+            color: #848989;
+            right: -28px;
+            top: 55px;
+        }  
+        p{
+            font-size: $font-size-small;
+            color: #a3a4a4;
+            margin: 0 0 50px;
+        }
+    }
+
+}

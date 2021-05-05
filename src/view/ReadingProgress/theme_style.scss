@@ -1,0 +1,11 @@
+@mixin reading-progress-theme {
+  .read-head{
+    color: $text-color-light;
+    background: $drawer-bg;
+  }
+  .reading-progress {
+    .book-item-container {
+      background: $drawer-bg;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+
+$punch-head-radius: 450px;
+$punch-head-margin: 100px;
+$max-content-width: 300px;
+.punch{
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  .punch-info{
+    position: absolute;
+    top:5px;
+    right:5px;
+    img{
+      width: 200px;
+    }
+  }
+  .punch-container{
+    position: relative;
+    max-width: 100%;
+    margin-top: $punch-head-margin;
+    min-height: calc(100% - #{$punch-head-margin});
+    &::before{
+      content: " ";
+      width:$punch-head-radius*2;
+      height: $punch-head-radius;
+      position: absolute;
+      left: 50%;
+      top: $avatar-size-large/2;
+      margin-left: -$punch-head-radius;
+      border-radius:$punch-head-radius $punch-head-radius 0 0;
+      background:$dark;
+    }
+  }
+  .avatar{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -$avatar-size-large/2;
+  }
+  .punch-inner-container{
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    background: $dark;
+    color: $text-color-inverse;
+    @include flex(center);
+
+  }
+  .punch-content{
+    width: calc(100% - #{$padding-large-horizontal*2});
+    padding-bottom: $padding-large-vertical;
+    max-width: $max-content-width;
+    position: relative;
+    background: $dark;
+    @include flex(center,center,column);
+  }
+  .punch-title{
+    margin: 10px 0;
+  }
+  .day{
+    font-size: $font-size-h1;
+    font-family: $font-family-en-bold;
+    border-top: 1px solid $split-line-color-inverse;
+    border-bottom: 1px solid $split-line-color-inverse;
+    width: 100%;
+    padding: 8px 0;
+    margin: 20px 0 ;
+    @include flex(center,center);
+  }
+  .quiz-answers{
+    width: 100%;
+    border-bottom: 1px solid $split-line-color-inverse;
+    @include flex(center);
+  }
+  .answer-item{
+    margin: 0 20px;
+    @include flex(center,center,column);
+    .result{
+      margin: 20px 0;
+      img{
+        width: 20px;
+      }
+    }
+  }
+  .solve-title{
+    margin: 20px 0;
+  }
+  .solve-item{
+    margin-bottom: 20px;
+    .num{
+      background: $white;
+      color: $primary-color;
+      width: 30px;
+      height: 30px;
+      margin: 20px auto;
+      border-radius: 100%;
+      font-family: $font-family-en;
+      @include flex(center,center);
+      //@include box-shadow(1px 5px 10px rgba(0,0,0,0.3));
+    }
+    .choices{
+      margin: 20px 0 ;
+      color: $text-color-inverse-light;
+      .choice-item{
+        margin-bottom: 10px;
+
+      }
+      .active{
+        font-weight: bold;
+        color: $text-color-inverse;
+      }
+    }
+    .quiz-title{
+      margin: 10px 0;
+    }
+    .solve-content{
+      color: $text-color-inverse-light;
+      font-size: $font-size-small;
+    }
+  }
+}

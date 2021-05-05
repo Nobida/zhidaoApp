@@ -1,0 +1,30 @@
+@mixin button-theme() {
+  .button {
+    color: $button-color;
+    background: $button-bg;
+    @include box-shadow(1px 2px 10px $button-shadow);
+    &.inverse {
+      color: $button-inverse-color;
+      background: $button-inverse-bg;
+      &::before {
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+    }
+    &.ghost {
+      color: $button-ghost-color;
+      background: none;
+      border: 1px solid $button-ghost-border-color;
+
+      &:active {
+        border: 1px solid $button-ghost-color;
+      }
+      &::before {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    &::before {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import "../../common_style/variables";
+.note-list{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: $padding-base-horizontal;
+  left: $padding-base-horizontal;
+  padding: $padding-large-vertical 0;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  .loadings{
+    height: 40px;
+    margin: 20px 0;
+  }
+}

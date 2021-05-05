@@ -1,0 +1,127 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+$book-item-container-height: 100px;
+.reading-progress{
+
+  .read-main{
+    padding-bottom: $nav-height + 150px;
+    overflow: scroll;
+  }
+  .course-name{
+          font-size: $font-size-base;
+          position: relative;
+          @include unable-tap-color;
+          &::after{
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            right: -18px;
+            top: 6px;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 8px solid $primary-color;
+          }
+  }
+  .read-head{
+    padding: 40px 30px 20px 30px;
+
+    @include flex(center,center,column);
+    .course-name {
+      margin-bottom: 15px;
+      margin-left: -15px;
+    }
+  }
+  .read-head-title{
+    @include flex(center);
+    font-family: $font-family-en-bold;
+    margin-bottom: 10px;
+    .day-info{
+      font-size: 24px;
+    }
+
+  }
+  .read-head-info{
+    @include flex(center);
+  }
+  .head-border{
+    border-bottom: 1px solid $split-line-color;
+
+  }
+  .head-shadow{
+    @include box-shadow(0px 1px 10px rgba(0,0,0,0.1));
+  }
+  .read-head-fixed{
+      width: 100%;
+      top: 0;
+      left: 0;
+      position:fixed;
+      background: $bg-color;
+      display: none;
+      @include transition(all .2s);
+      .info{
+        padding: $padding-base-vertical $padding-large-horizontal;
+        padding-bottom: 10px;
+        @include flex(space-between,center);
+
+        .read-info{
+            @include flex(flex-start);
+        }
+      }
+  }
+
+  .book-item-container{
+    position: fixed;
+    left: 0;
+    right: 0;
+    overflow-y: hidden;
+    background: $bg-color;
+    bottom: $nav-height - 2px ;
+    @include box-shadow(0px -1px 20px rgba(0,0,0,0.08));
+    width: 100%;
+    overflow-x: scroll;
+    padding-top: $padding-large-vertical;
+    @include flex(flex-start);
+    flex-wrap: nowrap;
+    z-index: 500;
+    .book-item-round:first-child{
+      margin-left: $padding-base-horizontal;
+    }
+    .book-item-round:last-child{
+       margin-right: $padding-base-horizontal;
+    }
+
+  }
+  .select-drawer{
+    padding-bottom: $nav-height;
+    padding-top: $padding-large-vertical;
+  }
+  .lesson-info-panel{
+      padding-bottom: $nav-height;
+      z-index: 900;
+
+      .lesson-info{
+        padding: 30px;
+        padding-bottom:10px;
+        .day{
+          font-family: $font-family-en-bold;
+          font-size: $font-size-h1;
+          margin-bottom: 10px;
+        }
+        .lesson-title{
+          font-size: $font-size-large;
+          margin-bottom:15px;
+        }
+      }
+      .lesson-buttons{
+        margin-left: -3px;
+        @include flex(flex-start);
+        .lesson-button{
+          margin-right: 16px;
+
+          display: inline-block;
+        }
+      }
+  }
+
+}

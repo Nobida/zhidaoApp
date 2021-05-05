@@ -1,0 +1,21 @@
+@import "../../../common_style/variables";
+@import "../../../common_style/mixins";
+.note-list-drawer{
+  position: relative;
+  height: 100%;
+  .note-list-container{
+    position: absolute;
+    top: $tab-height+6px;
+    bottom: $nav-height;
+    right: 0;
+    left: 0;
+    padding: 0 $padding-base-horizontal;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .create-note-btn{
+    position: fixed;
+    bottom: $nav-height+20px;
+    right: 20px;
+  }
+}

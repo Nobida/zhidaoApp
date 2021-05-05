@@ -1,0 +1,26 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+.create-post{
+  padding:$padding-large-vertical $padding-large-horizontal;
+  .create-input{
+    margin-top: 20px;
+    width: 100%;
+    overflow: visible;
+    margin-bottom: 80px;
+  }
+  .create-bottom{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    background: $bg-color;
+    @include flex(flex-end,center);
+    .button{
+      display: inline-block;
+      margin: 20px;
+      &:first-child{
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+.article-list{
+  min-height: 100%;
+  padding: 20px;
+  margin-bottom: $nav-height+20px;
+}
+.article-list-item{
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  @include rounded-corner(8px);
+  @include box-shadow(2px 4px 40px rgba(108,125,135,0.2));
+  .head-img{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    @include flex(center,center);
+    img{
+      width: 100%;
+    }
+  }
+  .content{
+    padding: 20px;
+  }
+  .title{
+    font-weight: bold;
+    font-size: $font-size-h3;
+    margin-bottom: 10px;
+  }
+  .author{
+    margin: 10px 0;
+    font-size: $font-size-small;
+  }
+  .desc{
+    color: $text-color-lighter;
+    font-size: $font-size-tiny;
+  }
+}

@@ -1,0 +1,32 @@
+@import "./variables";
+
+.hint{
+  @include flex(flex-start,center);
+  font-size: $font-size-small;
+  color: $text-color-light;
+  margin-right: 10px;
+
+}
+
+.hint:last-child{
+  margin-right: 0;
+}
+
+.hint::before{
+  content: " ";
+  width: 8px;
+  height: 8px;
+  background: $primary-color;
+  margin-right: 5px;
+  @include rounded-corner(100%);
+}
+
+.hint-success::before{
+  background: $brand-success;
+}
+.hint-info::before{
+  background: $brand-info;
+}
+.hint-warning::before{
+  background: $brand-warning;
+}

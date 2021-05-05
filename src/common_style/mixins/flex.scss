@@ -1,0 +1,8 @@
+@mixin flex($justify-content:flex-start,$align-items:flex-start,$flex-direction:row){
+  display: flex;
+  display: -webkit-flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-direction: $flex-direction;
+
+}

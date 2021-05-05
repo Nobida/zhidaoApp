@@ -1,0 +1,50 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+.user-book-notes{
+  padding: $padding-large-vertical $padding-base-horizontal;
+  .book-note-item{
+    @include flex(space-between,center);
+    margin: 20px 0;
+  }
+  .left{
+    @include flex(flex-start,center);
+  }
+  .book-item-round{
+    opacity: 1;
+  }
+  .book-title{
+    font-weight: 500;
+  }
+  .book-item-info{
+      margin-left: 10px;
+
+  }
+  .book-author{
+    color: $text-color-light;
+    font-size: $font-size-small;
+    line-height: 1.8;
+    margin-bottom: 5px;
+  }
+  .last-commit-time{
+    font-size: $font-size-small;
+    color: $text-color-light;
+  }
+  .note-count-info{
+    background: $bg-light;
+    width: 60px;
+    height: 70px;
+    @include rounded-corner(5px);
+    @include flex(center,center,column);
+    .count{
+      font-size: $font-size-large;
+      font-weight: bold;
+      margin-bottom: 5px;
+
+    }
+    .label{
+      font-size: $font-size-small;
+      color: $text-color-light;
+    }
+  }
+
+}

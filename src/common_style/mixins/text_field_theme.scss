@@ -1,0 +1,28 @@
+@mixin text-field-theme {
+  .input-label {
+    color: $text-color-light;
+  }
+
+  .input-div:after, .input-div:before {
+    background-color: $text-color-lighter;
+  }
+  .input-status{
+    svg{
+      fill: $primary-color;
+    }
+  }
+
+  .input-div::after {
+    background-color: $primary-color;
+
+  }
+  .input-div .text-input{
+    color: $primary-color;
+  }
+
+  .is-active .input-label {
+    color: $primary-color;
+  }
+}
+
+

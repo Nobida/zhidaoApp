@@ -1,0 +1,27 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+.web-log{
+  width: 100%;
+  min-height: 400px;
+  @include flex(center,center,column);
+  .logo{
+    width: 25px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+  }
+  .qr{
+    width: 150px;
+
+  }
+  .hide{
+    display: none;
+  }
+  p{
+    text-align: center;
+    font-size: $font-size-small;
+    margin-bottom: 60px;
+  }
+  .guide{
+    width: 280px;
+  }
+}

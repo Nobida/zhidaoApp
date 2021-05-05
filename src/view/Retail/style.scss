@@ -1,0 +1,25 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+.retail{
+    background: #f8f8f8;
+    min-height: 100%;
+    .retail-head{
+        @include flex(center,center)
+    } 
+    .head-content{ 
+        margin-top: 30px;
+        @include flex(center);
+    }
+    .head-info{
+        width: 150px;
+        font-size: $font-size-tiny;
+        @include flex(center); 
+        .label{
+            
+        }
+        .num{
+            font-size: $font-size-h1;
+            margin-right: 5px;
+        }
+    }
+}

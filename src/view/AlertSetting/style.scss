@@ -1,0 +1,57 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+.alert-setting{
+  $time-container-size: 260px;
+  @include flex(center,center,column);
+
+  .alert-switch-item{
+    width: 100%;
+    background: $split-line-color;
+    .alert-switch-item-content{
+      padding: 30px;
+      @include flex(space-between);
+    }
+  }
+  .time-selection{
+    width: 80px;
+    margin-right: 20px;
+  }
+  .time-container{
+    width: $time-container-size;
+    height: $time-container-size;
+    position: relative;
+  }
+  .time-circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $time-container-size;
+    height: $time-container-size;
+    @include transition(all .5s ease-in);
+    @include transform(rotate(90deg));
+  }
+  .time-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $time-container-size;
+    height: $time-container-size;
+    @include flex(center,center);
+  }
+  .hour,.colon,.minute{
+    margin:2px;
+    font-size: 40px;
+    font-weight: bold;
+    color: $brand-color;
+  }
+
+  .colon{
+    color: $primary-color;
+    margin-top: -5px;
+  }
+
+  .drawer-scroll{
+    max-height: 200px;
+    overflow-y: scroll;
+  }
+}

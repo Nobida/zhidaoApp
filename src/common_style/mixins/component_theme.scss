@@ -1,0 +1,38 @@
+@import "book_page_theme";
+@import "bottom_nav_theme";
+@import "calendar_theme";
+@import "drawer_theme";
+@import "type_theme";
+@import "icon_theme";
+@import "tabs_theme";
+@import "button_theme";
+@import "note_list_theme";
+@import "icon_button_theme";
+@import "loadings_theme";
+@import "empty_theme";
+@import "text_field_theme";
+@import "textarea_theme";
+@import "selection_theme";
+@import "form_item_theme";
+@import "back_to_home_theme";
+@import "audio_theme";
+@mixin component-theme{
+  @include book-page-theme;
+  @include bottom-nav-theme;
+  @include drawer-theme;
+  @include calender-theme;
+  @include type-theme;
+  @include icon-theme;
+  @include tabs-theme;
+  @include button-theme;
+  @include note-list-theme;
+  @include icon-button-theme;
+  @include loadings-theme;
+  @include empty-theme;
+  @include text-field-theme;
+  @include textarea-theme;
+  @include selection-theme;
+  @include form-item-theme;
+  @include back-to-home-theme;
+  @include audio-theme;
+}

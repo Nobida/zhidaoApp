@@ -1,0 +1,39 @@
+.card{
+    overflow: hidden;
+    position: relative;
+    height: $card-height;
+    margin-bottom: 20px;
+    @include rounded-corner(8px);
+    @include box-shadow(4px 10px 40px rgba(108,125,135,0.4));
+    &.small{
+      height: $card-height-small;
+    }
+    &.large{
+      height: $card-height-large;
+    }
+    &.shadow-light{
+        @include light-shadow;
+    }
+    &.shadow-dark{
+        @include dark-shadow;
+    }
+    &.shadow-none{
+        @include box-shadow(none);
+    }
+    .card-bg{
+      overflow: hidden;
+      top: 0;
+      width: 100%;
+      @include flex(center,center);
+    }
+    .card-info{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      color: $white;
+      background: $card-mask-color;
+      @include flex(center,center,column);
+    }
+
+}

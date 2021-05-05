@@ -1,0 +1,6 @@
+@mixin app-theme(){
+  &.app{
+    color: $text-color;
+    background: $bg-color;
+  }
+}

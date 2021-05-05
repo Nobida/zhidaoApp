@@ -1,0 +1,7 @@
+@mixin textarea-theme {
+  textarea {
+    background: $bg-color;
+    color: $primary-color;
+
+  }
+}

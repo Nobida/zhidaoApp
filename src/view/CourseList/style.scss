@@ -1,0 +1,18 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+.course-list{
+  padding: $padding-base-horizontal;
+  margin-bottom: $nav-height;
+  .course-head{
+    @include flex(space-between,center);
+    .title{
+      font-size: $font-size-h2;
+      font-weight: $headings-font-weight;
+    }
+  }
+  .course-type-title{
+    border-left: 5px solid $brand-color;
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+}

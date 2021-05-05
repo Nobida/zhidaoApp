@@ -1,0 +1,65 @@
+.input-label {
+  display: block;
+  font-size: $form-label-font-size;
+  transform: translateY(25px);
+  color: $text-color-light;
+  transition: all 0.3s;
+}
+
+.text-input {
+  position: relative;
+  background: transparent;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 8px 0;
+  font-size: $form-font-size;
+}
+
+.input-div {
+  padding: 10px 0 0 0;
+  position: relative;
+
+}
+
+.input-status{
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  svg{
+    fill: $primary-color;
+    width: 15px;
+  }
+}
+
+.input-div:after, .input-div:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: $text-field-line-color;
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+
+.input-div::after {
+  background-color: $primary-color;
+  transform: scaleX(0);
+  height: 1.5px;
+}
+
+.is-active::after {
+  transform: scaleX(1);
+}
+
+.is-active .input-label {
+  color: $primary-color;
+}
+
+.is-completed .input-label {
+  font-size: $form-label-font-size;
+  transform: translateY(0);
+}
+

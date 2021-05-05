@@ -1,0 +1,238 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+
+.reading-process2{
+  margin-left: 5px;
+  padding: 15px;
+  .progress-head{
+    position: fixed;
+    top: $nav-height;
+    left: 0;
+    background: $bg-color;
+    width: 100%;
+    z-index: 20;
+    @include box-shadow(2px 2px 20px rgba(0,0,0, 0.1));
+    .progress-head-content{
+      @include flex(center, center);
+    }
+    .head-item{
+      margin: 15px 20px;
+      font-size: $font-size-small;
+      @include flex(flex-start);
+      .num{
+        font-weight: bold;
+        color: $brand-color;
+        margin-left: 15px;
+      }
+    }
+
+  }
+  .progress-items{
+    margin-top: 10px;
+  }
+
+  .cur-lesson-item{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 20px;
+    @include rounded-corner(6px);
+    @include light-shadow();
+    .course-list-item-bg{
+      width: 100%;
+      height: 140px;
+      overflow: hidden;
+      position: relative;
+      @include rounded-corner(6px);
+      img{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .course-info{
+        position: absolute;
+        top: 60px;
+        left: 20px;
+        color: white;
+        .name{
+          font-weight:bold;
+          font-size: $font-size-small;
+        }
+
+
+      }
+      .tag-list{
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          @include flex(flex-end);
+        }
+
+    }
+    .status-label{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .today-lesson{
+      margin: 20px;
+    }
+    .info-row{
+      @include flex(flex-start)
+    }
+    .label{
+      font-size: $font-size-small;
+      color: $text-color-light;
+      margin-left: 5px;
+    }
+    .lesson-name{
+      font-size: $font-size-small;
+      font-weight: bold;
+      margin: 12px 0;
+    }
+    .lesson-desc{
+      font-size: $font-size-small;
+      color: $text-color-light;
+      font-weight: normal;
+    }
+
+    .bg{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    .bg-cap{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #C2A544;
+      opacity: 0.28;
+    }
+    .content{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 100;
+      @include flex(center,center);
+    }
+    .time{
+      font-size: $font-size-tiny;
+      margin: 10px 0;
+    }
+    .enrolled-tag{
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      font-size: $font-size-small;
+    }
+    .mask{
+      background: rgba(0,0,0,0.3);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .progress-circle{
+    width: 14px;
+    height: 14px;
+    border: 3px solid $grey-lighter;
+    float: left;
+    @include rounded-corner(100%);
+  }
+  .reading-process2-item{
+    @include flex(space-between);
+    font-weight: bold;
+    margin: 0 20px;
+    &.active{
+      .progress-content{
+        font-weight: bold;
+        width: 100%;
+        color: $dark;
+        &:after{
+          width: 12px;
+          height: 12px;
+          border: 4px solid $brand-color;
+        }
+      }
+    }
+
+  }
+  .progress-section{
+    padding: 20px;
+    font-weight: bold;
+    font-size: $font-size-h3;
+    margin-bottom: 40px;
+    position: relative;
+    @include rounded-corner(8px);
+    @include box-shadow(2px 4px 40px rgba(108,125,135,0.2));
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: 20px;
+      height: 40px;
+      border-left: 2px solid $grey-lighter;
+    }
+  }
+  .progress-content{
+    border-left: 2px solid $grey-lighter;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    font-weight: $headings-font-weight;
+    color: $grey-dark;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -10px;
+      width: 14px;
+      height: 14px;
+      border: 3px solid $grey-lighter;
+      float: left;
+      background: $white;
+      @include rounded-corner(100%);
+    }
+
+  }
+  .progress-time{
+    height: 20px;
+    color: $grey-light;
+    font-size: $font-size-small;
+    margin-top: 6px;
+  }
+  .status-label{
+    color: $white;
+    flex-wrap: nowrap;
+    min-width: 50px;
+    margin-left: 15px;
+    font-size: $font-size-small;
+    height: 22px;
+    @include rounded-corner(30px);
+    @include flex(center,center);
+    &.finished{
+      background-color: $brand-success;
+    }
+    &.not_finished{
+      background-color: $brand-warning;
+    }
+    &.late{
+      background-color: $brand-info;
+    }
+
+  }
+
+
+
+
+
+}

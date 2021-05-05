@@ -1,0 +1,21 @@
+.user-list-item{
+  margin: $media-item-margin 0;
+  @include flex(space-between,center);
+  .left{
+    @include flex(flex-start,center);
+  }
+  .info{
+    margin-left: 10px;
+  }
+  .nickname{
+    font-weight: $headings-font-weight;
+    margin-bottom: 10px;
+  }
+  .intro{
+    font-size: $font-size-small;
+    color: $text-color-light;
+  }
+  .follow-button{
+    width: 45px;
+  }
+}

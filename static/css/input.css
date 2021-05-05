@@ -1,0 +1,54 @@
+.input-label {
+  display: block;
+  font-size: 16px;
+  transform: translateY(25px);
+  color: #999;
+  transition: all 0.3s;
+}
+
+.text-input {
+  position: relative;
+  background: transparent;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 8px 0;
+  font-size:16px;
+}
+
+.input-div {
+  padding: 10px 0 0 0;
+  position: relative;
+}
+
+.input-div:after, .input-div:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #aaa;
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+
+.input-div::after {
+  background-color: #333;
+  transform: scaleX(0);
+  height: 1.5px;
+}
+
+.is-active::after {
+  transform: scaleX(1);
+}
+
+.is-active .input-label {
+  color: #333;
+}
+
+.is-completed .input-label {
+  font-size: 16px;
+  transform: translateY(0);
+}
+

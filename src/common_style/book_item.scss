@@ -1,0 +1,58 @@
+
+.book-item-container{
+  @include flex(flex-start);
+}
+
+
+.book-item{
+   padding: $book-item-padding;
+   margin-bottom: 10px;
+
+  .book-cover{
+    width: $book-item-width;
+    height: $book-item-height;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 1px 3px 7px rgba(0,0,0,0.2);
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .book-label{
+    width: $book-item-width;
+    text-align: center;
+    margin-top: 5px;
+    font-size: $font-size-tiny;
+
+  }
+}
+
+
+.book-item-round{
+   padding: $book-item-padding;
+   opacity: 0.4;
+
+  .book-cover{
+    width: $book-item-round-size;
+    height: $book-item-round-size;
+    position: relative;
+    overflow: hidden;
+    @include rounded-corner(100%);
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .book-label{
+    width: $book-item-round-size;
+    text-align: center;
+    margin-top: 5px;
+    font-size: $font-size-tiny;
+  }
+
+  &.active{
+    opacity: 1;
+  }
+}

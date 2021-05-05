@@ -1,0 +1,7 @@
+@mixin gift-img-theme {
+    background: $bg-color;
+    .save-info {
+      background: $bg-color;
+      color: $text-color-light;
+    }
+}

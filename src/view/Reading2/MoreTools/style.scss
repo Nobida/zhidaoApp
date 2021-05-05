@@ -1,0 +1,20 @@
+@import "../../../common_style/variables";
+@import "../../../common_style/mixins";
+.more-tools{
+  width: 100px;
+  position: fixed;
+  bottom: $nav-height;
+  right: 10px;
+  background: $bg-color;
+  z-index: 900;
+  @include box-shadow(0px 0px 10px rgba(0,0,0,0.1));
+  .more-tool-item{
+    width: 100%;
+    font-size: $font-size-small;
+    margin: 22px 0;
+    @include flex(center,center);
+    .tool-icon{
+      margin-right: 10px;
+    }
+  }
+}

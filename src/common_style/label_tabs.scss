@@ -1,0 +1,42 @@
+//== Tabs
+//
+.label-tabs{
+  height: $tab-height;
+  position: relative;
+  padding-top: 5px;
+  background: $tab-bg;
+  z-index:1000;
+  @include flex(center,center);
+
+  .label-tab-container{
+    height:100%;
+    @include flex(space-start);
+
+    .label-tab-item{
+      height: 100%;
+      font-weight: bold;
+      min-width: $label-tab-item-min-width;
+      margin: 0 15px;
+      position: relative;
+      color: $grey-medium;
+      font-size: $tab-font-size;
+      @include flex(center,center);
+      @include unable-tap-color;
+      &::after{
+          position: absolute;
+          width: 0;
+          left: 50%;
+          bottom: 0;
+          content: '';
+      }
+      &.active{
+        color: $tab-active-color;
+        &::after{
+          width: 100%;
+          left: 0;
+          @include transition(all .2s ease-in);
+        }
+      }
+    }
+  }
+}

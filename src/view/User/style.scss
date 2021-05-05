@@ -1,0 +1,76 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+
+.user{
+  $user-width: 80%;
+  $tool-icon-size: 25px;
+  padding: 25px $padding-base-horizontal;
+  width: $user-width;
+  margin:0 auto;
+  position: relative;
+
+  .user-head {
+    margin-top: 10px;
+    @include flex(center, center, column);
+    .avatar {
+      margin-bottom: 20px;
+    }
+    .nickname {
+      font-size: $font-size-large;
+    }
+  }
+  .user-info{
+    margin-top: 10px;
+    @include flex(space-between);
+    width: 65%;
+    .info-item{
+      width: 50%;
+      margin: 10px;
+      @include flex(center);
+    }
+  }
+  .gift-btn{
+    position: fixed;
+    right: 20px;
+    z-index:2000;
+    bottom: $nav-height + 20px;
+
+  }
+  .tools{
+    margin-top: 0;
+    padding-top: 10px;
+    border-top: 1px solid $split-line-color;
+    flex-wrap: wrap;
+    @include flex(flex-start);
+    .tool-icon{
+      width:33.33%;
+      margin: 20px 0;
+      @include flex(center,center,column);
+      .label{
+        margin-top: 10px;
+        font-size: 11px;
+        color: $text-color-light;
+      }
+    }
+  }
+}
+.avator-retail{
+  position: absolute;
+  right: -28px;
+  top: 55px;
+  cursor: pointer;
+  .button.middle{
+    float: right;
+    padding: 0 20px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-size: 14px;
+  }
+
+}
+
+.avator-retail:before{
+  height : 100px;
+  width  : 70px;
+}
+

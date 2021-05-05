@@ -1,0 +1,17 @@
+@mixin tabs-theme(){
+  .tabs{
+    background: $tab-bg;
+    border-bottom: 1px solid $split-line-color;
+    .tab-container{
+      .tab-item{
+        color: $tab-color;
+        &::after{
+            border-bottom: $tab-line-weight solid $tab-active-color;
+        }
+        &.active{
+          color: $tab-active-color;
+        }
+      }
+    }
+  }
+}

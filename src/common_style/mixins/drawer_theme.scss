@@ -1,0 +1,13 @@
+@mixin drawer-theme(){
+  .drawer-container {
+    .drawer {
+      background: $drawer-bg;
+      .drawer-close:before, .drawer-close:after {
+        background-color: $text-color;
+      }
+    }
+    .drawer-overlay {
+      background: $drawer-overlay-bg;
+    }
+  }
+}

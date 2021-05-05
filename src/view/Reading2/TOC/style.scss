@@ -1,0 +1,66 @@
+@import "../../../common_style/variables";
+@import "../../../common_style/mixins";
+.contents{
+  .title{
+    margin: 10px 0;
+  }
+  .book-title{
+    font-size: $font-size-large;
+    margin: 20px 0;
+    font-weight: 500;
+    @include flex(space-between);
+  }
+
+  .contents-item{
+    color: $text-color-light;
+
+    .day{
+      border-top: 1px solid $split-line-color;
+      border-bottom: 1px solid $split-line-color;
+      line-height: 40px;
+      padding-left: 5px;
+      margin: 10px 0;
+      font-size: $font-size-large;
+      font-family: $font-family-en-bold;
+      @include flex(space-between,center);
+    }
+    .name{
+      font-size: $font-size-small;
+      color: $text-color-lighter;
+      font-weight: 500;
+      margin-bottom: 10px;
+      margin-left: 10px;
+    }
+    .status{
+        width: 50px;
+        height: 20px;
+        font-weight: bold;
+        color: white;
+        font-size: $font-size-tiny;
+        @include rounded-corner(20px);
+        @include flex(center,center);
+        &.finished{
+          background: $brand-success;
+        }
+        &.late{
+          background: $brand-info;
+        }
+        &.not-finished{
+          background: $brand-warning;
+        }
+      }
+    .day-contents-item{
+      line-height: 38px;
+      font-size: $font-size-base;
+      padding-left: 10px;
+      @include unable-tap-color;
+      &.active{
+        font-weight: bold;
+      }
+    }
+    &.active{
+      color: $text-color;
+      font-weight: bold;
+    }
+  }
+}

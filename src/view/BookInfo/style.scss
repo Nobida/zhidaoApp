@@ -1,0 +1,23 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+$book-cover-width: 120px;
+.book-info{
+  padding: $padding-base-vertical $padding-base-horizontal;
+  .book-head{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    @include flex(center,center,column);
+    .book-cover{
+      width: $book-cover-width;
+      @include box-shadow(1px 3px 20px rgba(0,0,0,0.08));
+      //height: $book-cover-height;
+    }
+    .book-title{
+      color: $text-color-light;
+      margin-top: 20px;
+    }
+  }
+  .content{
+      padding: $padding-large-vertical $padding-large-vertical;
+  }
+}

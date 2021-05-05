@@ -1,0 +1,42 @@
+.icon-button-container{
+  @include flex(center,center,column);
+  .label{
+    margin-top: 10px;
+    font-size: $font-size-tiny;
+    color: $text-color-light;
+  }
+}
+.icon-button{
+  width: $icon-button-size;
+  height: $icon-button-size;
+  background: $icon-button-background;
+  z-index: 900;
+  @include rounded-corner(100%);
+  @include box-shadow(0px 0px 20px rgba(0,0,0,0.15));
+  @include flex(center,center);
+  svg{
+    width: $icon-button-icon-size;
+    fill: $icon-button-icon-color;
+  }
+  &.inverse{
+    background: $icon-button-icon-color;
+    svg{
+      fill: $icon-button-background;
+    }
+  }
+  &.sm{
+    width: $icon-button-size-sm;
+    height: $icon-button-size-sm;
+    svg{
+      width: $icon-button-icon-size-sm;
+    }
+  }
+  &.lg{
+    width: $icon-button-size-lg;
+    height: $icon-button-size-lg;
+    svg{
+      width: $icon-button-icon-size-lg;
+    }
+  }
+
+}

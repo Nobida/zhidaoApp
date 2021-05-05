@@ -1,0 +1,45 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+.share-image{
+  width: 100%;
+  height:100%;
+  //background: #555;
+  .canvas-container{
+    //transform: scale(0.7);
+    //opacity: 0;
+    display:none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    //position: relative;
+    //@include box-shadow(0 0 10px rgba(0,0,0,0.2));
+  }
+  .canvas-img-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: scroll;
+    padding-top: 70px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    @include flex(center);
+  }
+  .canvas-img{
+    width: calc(100% - 90px);
+    max-width: 375px;
+    max-height: 667px;
+    @include box-shadow(0 0 20px rgba(0,0,0,0.1));
+  }
+  .save-info{
+    width: 100%;
+    position: fixed;
+    background: rgba(255,255,255,0.9);
+    padding: 20px 0;
+    font-size: $font-size-small;
+    text-align: center;
+    color: $text-color-light;
+  }
+
+}

@@ -1,0 +1,41 @@
+/*Styling Selectbox*/
+@mixin selection-theme {
+  .drop-menu {
+    background: $bg-color;
+    border: 1px solid $bg-color;
+    color: $text-color;
+
+  }
+  .drop-menu span {
+    &::before {
+      background-color: $text-color-lighter;
+    }
+    &::after {
+      background-color: $primary-color;
+    }
+  }
+
+  .drop-menu .select i {
+    color: #888;
+  }
+
+  .drop-menu:active {
+    background-color: $split-line-color;
+  }
+  .drop-menu.active:hover,
+  .drop-menu.active {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    //border-radius: 5px 5px 0 0;
+  }
+  .drop-menu .dropeddown {
+    background-color: $bg-color;
+  }
+  .drop-menu .dropeddown li:hover {
+    background-color: darken($bg-color,0.3);
+    color: $text-color;
+  }
+  .drop-menu .dropeddown li:active {
+    background-color: darken($bg-color,0.3);
+    color: $text-color;
+  }
+}

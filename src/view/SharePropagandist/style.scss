@@ -1,0 +1,22 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+.share-propagandist{
+  padding: $padding-base-horizontal;
+  canvas{
+    display: none;
+  }
+  .img-container{
+    width: 100%;
+    @include flex(center,center,column);
+  }
+  .invitation-img{
+    max-width: 400px;
+    width: calc(100% - 70px);
+    margin: 30px 0;
+  }
+  .follow-img{
+    // max-width: 200px;
+     width: 188px;
+     margin: 30px 0;
+  }
+}

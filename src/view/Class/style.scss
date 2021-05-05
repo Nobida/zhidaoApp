@@ -1,0 +1,200 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+.class{
+  $card-height: 180px;
+  padding: $padding-base-horizontal;
+  .content{
+    padding: 0 10px;
+  }
+  .class-card{
+    overflow: hidden;
+    position: relative;
+    height: $card-height;
+    .card-bg{
+      overflow: hidden;
+      top: 0;
+      width: 100%;
+      @include flex(center,center);
+
+    }
+    .card-info{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: $card-height;
+      color: $white;
+      font-weight: bold;
+      font-size: $font-size-h3;
+      @include flex(center,center);
+    }
+
+  }
+  .intro-info{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: $font-size-tiny;
+    opacity: 0.5;
+  }
+  .assistant-item{
+    @include flex(space-between,center);
+    .left{
+      @include flex(flex-start,center);
+    }
+    .name{
+      margin-left: 20px;
+    }
+  }
+  .members{
+    @include flex(space-between,center);
+    display: none;
+    .user-number{
+      color: $brand-color;
+      font-size: $font-size-h4;
+    }
+  }
+  .user-list{
+    @include flex(flex-start);
+    .user-item{
+      margin-right: 10px;
+    }
+  }
+  .rank-card{
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 150px;
+    position: relative;
+    @include rounded-corner(8px);
+    @include box-shadow(4px 10px 40px rgba(108,125,135,0.2));
+    @include flex(center,center);
+    .medal-container{
+      margin: 0 20px;
+      @include flex(center,center,column);
+    }
+    .num-container{
+      @include flex(center,center,column);
+      .label{
+        font-size: $font-size-small;
+        color: $text-color-light;
+      }
+      .num{
+        font-weight: bold;
+      }
+    }
+    .edin-bg{
+      width: 70px;
+      margin-top: 15px;
+    }
+    .medal{
+      @include rounded-corner(100%);
+      margin-top: -20px;
+      width: 35px;
+      height: 35px;
+      border: 5px solid #edc135;
+      background: white;
+    }
+    .name{
+      height: 40px;
+      font-size: $font-size-small;
+      @include flex(center,center,column);
+    }
+    .num{
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .rank-num{
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      font-weight: bold;
+      color: white;
+      width: 25px;
+      height: 25px;
+      @include rounded-corner(100%);
+      @include flex(center,center);
+    }
+    &.gold{
+      .edin-bg{
+        width: 80px;
+      }
+      .medal{
+        width: 50px;
+        height: 50px;
+      }
+      .rank-num {
+        background: #edc135;
+      }
+    }
+    &.silver{
+      height: 180px;
+      margin-right: 10px;
+      @include flex(center,center,column);
+      .medal{
+        border: 5px solid #d1d1d1;
+      }
+      .rank-num {
+        background: #0099cc;
+      }
+    }
+    &.copper{
+      height: 180px;
+      margin-left: 10px;
+      @include flex(center,center,column);
+      .medal{
+        border: 5px solid #ea9036;
+      }
+      .rank-num {
+        background: #49b797;
+      }
+    }
+  }
+  .ranking-list{
+    padding: 10px;
+  }
+  .ranking-item{
+    margin: 20px 0;
+    @include flex(space-between,center);
+    .left{
+      @include flex(flex-start,center);
+    }
+    .rank{
+      margin-right: 10px;
+    }
+    .name{
+      margin-left: 20px;
+      font-size: $font-size-small;
+    }
+    .right{
+      @include flex(flex-start,flex-end);
+    }
+    .num{
+      font-weight: bold;
+      font-size: $font-size-small;
+    }
+    .type{
+      color: $brand-color;
+      font-size: $font-size-tiny;
+    }
+  }
+  .qr-mask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    z-index: 2000;
+    @include flex(center,center,column);
+    .assistant-info{
+      @include flex(center,center,column);
+    }
+    .name{
+        margin-bottom: 20px;
+    }
+    img{
+      width: 250px;
+    }
+  }
+}

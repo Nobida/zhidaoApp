@@ -1,0 +1,16 @@
+@mixin icon-theme{
+  .icon-container{
+    .label{
+      color: $text-color-light;
+    }
+  }
+  .icon{
+    &::before{
+      background-color: $ripple-color-base;
+    }
+    svg{
+      fill: $icon-color;
+      width: 100%;
+    }
+  }
+}

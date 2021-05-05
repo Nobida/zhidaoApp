@@ -1,0 +1,34 @@
+.store-list-item{
+  margin: $media-item-margin 0;
+  @include flex(flex-start,center);
+  .thumbnail{
+    width: $media-img-size;
+    height: $media-img-size;
+    overflow: hidden;
+    flex-shrink: 0;
+    @include rounded-corner(100%);
+    @include box-shadow(1px 1px 8px rgba(0,0,0,0.15));
+    img{
+      width: $media-img-size;
+    }
+  }
+  .item-info{
+    margin-left: $media-info-margin-left;
+    .name{
+      font-size: $media-title-font-size;
+      margin-bottom: 9px;
+    }
+    .score-info{
+      @include flex(flex-start);
+      span{
+        margin-right: 10px;
+        color: $text-color-light;
+      }
+      .score{
+        font-weight: bold;
+        color: $primary-color;
+      }
+    }
+  }
+
+}

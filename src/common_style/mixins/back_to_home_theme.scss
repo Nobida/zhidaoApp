@@ -1,0 +1,7 @@
+@mixin back-to-home-theme(){
+  .back-to-home {
+    background: $bg-color;
+    color: $text-color;
+    opacity: 0.8;
+  }
+}

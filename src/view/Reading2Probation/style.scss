@@ -1,0 +1,108 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+$theme-green: #c0d6bd;
+$theme-yellow: #d3d0bc;
+.reading{
+  height:100%;
+  max-width: 700px;
+  margin: 0 auto;
+  .header{
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $bg-color;
+    z-index: 800;
+    @include box-shadow(0 2px 10px rgba(0,0,0,0.1));
+    @include flex(space-between,center);
+    .left{
+      margin-left: 30px;
+      cursor: pointer;
+    }
+    .right{
+      margin-right: 30px;
+      cursor: pointer;
+    }
+  }
+  .tabs{
+    position: absolute;
+    width:100%;
+    top: 0;
+  }
+  .book-page-slide-container{
+    width: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    .read-button{
+      margin: $padding-large-vertical $padding-large-horizontal;
+    }
+  }
+  .setting-container{
+    //height: 150px;
+    padding-bottom: $nav-height;
+  }
+  .note-info-container{
+
+    padding-top: 30px;
+    padding-bottom: $nav-height+20px;
+    // padding-top: 30px;
+    position: relative;
+    .highlight-content{
+      margin: 0 20px;
+      max-height: 200px;
+      overflow: scroll;
+    }
+  }
+  .delete-note-container{
+    padding-top: 30px;
+    padding-bottom: $nav-height;
+    .delete-content{
+      margin: 0 20px;
+      max-height: 200px;
+      overflow: scroll;
+    }
+    .button-tools{
+      @include flex(flex-end)
+    }
+    .button{
+      display: inline-block;
+      margin: 10px;
+    }
+  }
+  .share-btn{
+    position: fixed;
+    bottom:  $nav-height + 160px;
+    right:  20px;
+  }
+  .note-btn{
+    position: fixed;
+    bottom:  $nav-height + 20px;
+    right:  20px;
+  }
+  .question-btn{
+    position: fixed;
+    bottom:  $nav-height + 90px;
+    right:  20px;
+  }
+  .close-btn{
+     position: fixed;
+    bottom:  $nav-height + 230px;
+    right:  20px;
+
+  }
+  .ad-link{
+    position: fixed;
+    bottom:  $nav-height + 100px;
+    left: 0;
+    background: rgba(255,255,255,0.8);
+    padding: 5px 10px;
+    @include rounded-corner(0 30px 30px 0);
+    @include base-shadow();
+    z-index: 900;
+    font-size: $font-size-small;
+    color: $text-color-light;
+
+  }
+
+}

@@ -1,0 +1,42 @@
+// 进出场动画
+// 飞入
+.slide-in-appear {
+  opacity: 0.01;
+  transition: all 150ms linear;
+  transition-delay: 150ms;
+  @include transform(translateX(200px));
+  &.slide-in-appear-active {
+    opacity: 1;
+    @include transform(translateX(0));
+  }
+}
+
+.slide-in-enter {
+  opacity: 0.5;
+  transition: all 150ms linear;
+  transition-delay: 150ms;
+  @include transform(translateX(200px));
+  &.slide-in-enter-active {
+    opacity: 1;
+    @include transform(translateX(0));
+  }
+}
+
+// 向左滑出
+.slide-in-leave {
+  //position: absolute;
+  //left: 0;
+  //top: 0;
+  //opacity: 1;
+  //transform: translateX(0);
+  transition: all 150ms linear;
+  //transition-delay: 100ms;
+  opacity: 1;
+    @include transform(translateX(0));
+  &.slide-in-leave-active {
+    opacity: 0.01;
+  @include transform(translateX(-200px));
+   // opacity: 0.01;
+    //transform: translateX(500px);
+  }
+}

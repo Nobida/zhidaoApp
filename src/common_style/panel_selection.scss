@@ -1,0 +1,12 @@
+.panel-selection-container{
+  //padding: $padding-base-vertical $padding-base-horizontal;
+  @include flex(center,center,column);
+  .panel-selection-item{
+      color: $text-color-lighter;
+      margin: $panel-selection-item-margin 0;
+      @include unable-tap-color;
+      &.active{
+        color: $primary-color;
+      }
+  }
+}

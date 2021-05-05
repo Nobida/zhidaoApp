@@ -1,0 +1,17 @@
+@mixin contents-theme() {
+  .contents {
+    .book-title{
+      color: $headings-color;
+    }
+    .contents-item {
+      color: $text-color-light;
+      .day {
+        border-top: 1px solid $split-line-color;
+        border-bottom: 1px solid $split-line-color;
+      }
+      &.active {
+        color: $text-color;
+      }
+    }
+  }
+}

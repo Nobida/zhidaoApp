@@ -1,0 +1,17 @@
+@mixin user-theme(){
+  .user{
+    .user-head {
+      .nickname {
+        color: $text-color-light;
+      }
+    }
+    .tools{
+      border-top: 1px solid $split-line-color;
+      .tool-icon{
+        .label{
+          color: $text-color-light;
+        }
+      }
+    }
+  }
+}

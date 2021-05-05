@@ -1,0 +1,29 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+.admission-notice{
+    width: 100%;
+    min-height: 100%;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    @include flex(center,center,column);
+
+  canvas{
+    //display: none;
+  }
+  .admission-img {
+    width: calc(100% - 80px);
+    max-width: 375px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    @include rounded-corner(6px);
+    @include box-shadow(0px 0px 10px rgba(0, 0, 0, 0.3));
+  }
+  .bottom-info{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    color: $white;
+    height: 50px;
+    @include flex(center,center);
+  }
+}

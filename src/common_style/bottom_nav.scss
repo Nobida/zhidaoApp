@@ -1,0 +1,101 @@
+//== Bottom Nav
+//
+
+.bottom-nav{
+  width: 100%;
+  height: $nav-height;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: $nav-bg;
+  z-index: $nav-z-index;
+  @include flex(space-between);
+  @keyframes rippleAnim {
+    from{
+      width: $nav-icon-size*1.5;
+      height: $nav-icon-size*1.5;
+      opacity: 1;
+    }
+    to{
+      width: $nav-icon-size*3;
+      height: $nav-icon-size*3;
+      opacity: 0;
+    }
+  }
+  &.shadow{
+    @include box-shadow(0px 0px 10px rgba(0,0,0,0.1));
+    @include transition(all .2s);
+  }
+  // Nav Item
+  .nav-item{
+    @include flex(center,center,column);
+    position: relative;
+    transition: all .2s ease-out, padding-top .2s ease-out;
+    height: $nav-height;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    .nav-icon{
+      height: $nav-icon-size;
+      font-size: $nav-icon-size;
+
+      img{
+        height: 100%;
+      }
+      svg{
+        height: $nav-icon-size;
+        fill: $bottom-column-color;
+      }
+    }
+    .nav-label{
+      font-size: $nav-label-size;
+      color: $bottom-column-color;
+      margin-top: 4px;
+      margin-bottom: -8px;
+      font-weight: normal;
+    }
+
+    &::before{
+      content: "";
+      position: absolute;
+      display: inline-block;
+      vertical-align: middle;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      border-radius: 100%;
+      opacity: 0;
+      padding-top: 0;
+      width: $nav-icon-size;
+      height: $nav-icon-size;
+      background-color: $ripple-color-base;
+      @include transform(translate(-50%, -50%));
+    }
+
+    &.active:before {
+      width: $nav-icon-size *2;
+      height: $nav-icon-size *2;
+      opacity: 0;
+      animation: rippleAnim .3s ease-out;
+      //transition: all .5s ease-out;
+      //transition: width .2s ease-out, padding-top .2s ease-out;
+    }
+
+    &.active{
+      .nav-icon{
+        opacity:1;
+        margin-top: -3px;
+        margin-bottom: 3px;
+        svg{
+          height: $nav-icon-size;
+          fill: $brand-color;
+        }
+       }
+      .nav-label{
+        color: $brand-color;
+      }
+    }
+
+  }
+
+
+}

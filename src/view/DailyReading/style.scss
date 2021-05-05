@@ -1,0 +1,140 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+.unenroll-card{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 20px;
+  @include rounded-corner(6px);
+  @include light-shadow();
+  .item-bg{
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+    position: relative;
+    @include rounded-corner(6px);
+    img{
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .course-info{
+      position: absolute;
+      top: 60px;
+      left: 20px;
+      color: white;
+      .name{
+        font-weight:bold;
+        font-size: $font-size-small;
+      }
+
+
+    }
+    .tag-list{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        @include flex(flex-end);
+      }
+
+  }
+  .today-lesson{
+    margin: 20px;
+  }
+  .content{
+    margin: 20px;
+
+  }
+  .desc{
+    font-size: $font-size-small;
+    color: $text-color-light;
+  }
+  .info{
+    margin-top: 20px;
+    font-size:$font-size-small;
+  }
+  .info-row{
+    @include flex(flex-start)
+  }
+  .label{
+    font-size: $font-size-small;
+    color: $text-color-light;
+    margin-left: 5px;
+  }
+  .lesson-name{
+    font-size: $font-size-small;
+    font-weight: bold;
+    margin: 12px 0;
+  }
+  .lesson-desc{
+    font-size: $font-size-small;
+    color: $text-color-light;
+  }
+
+  .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .bg-cap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #C2A544;
+    opacity: 0.28;
+  }
+  .time{
+    font-size: $font-size-tiny;
+    margin: 10px 0;
+  }
+  .enrolled-tag{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: $font-size-small;
+  }
+  .mask{
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.daily-reading{
+  margin: 20px;
+  margin-bottom: $nav-height+20px;
+  .tools{
+    position: fixed;
+    bottom: $nav-height+20px;
+    left:40px;
+    width: calc(100% - 80px);
+    @include flex(space-between);
+  }
+  .menu-btn{
+    position: fixed;
+    top: 80px;
+    right: 20px;
+  }
+  .selection-content{
+    margin-bottom: $nav-height+20px;
+    max-height: 200px;
+    overflow: scroll;
+    position: relative;
+    margin-top: 20px;
+    .selection-item{
+      margin: 15px 0;
+      text-align: center;
+      color: $text-color-light;
+      font-size: $font-size-small;
+      &.active{
+        color: $text-color;
+      }
+    }
+  }
+}

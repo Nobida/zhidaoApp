@@ -1,0 +1,71 @@
+@import "mixins/component_theme";
+@import "mixins/view_theme";
+@import "mixins/reading_theme";
+$primary-color:             $white;
+$bg-color:                  #3e4149 ;
+$bg-dark:                   #363940;
+$bg-light:                  #363940;
+
+//** Global text color on `<body>`.
+$text-color:                rgba(255,255,255,0.7);
+$text-color-light:          rgba(255,255,255,0.4) ;
+$text-color-lighter:        rgba(255,255,255,0.2);
+$text-color-inverse:        $grey-dark;
+$text-color-inverse-light:  $grey-light;
+$headings-color:            $white;
+$headings-small-color:      $grey-light ;
+
+$split-line-color:          #474c54;
+
+//== BottomNav
+//
+$nav-bg:            $bg-dark;
+$nav-icon-color:    $white;
+
+//== Bookpage
+//
+$book-page-highlight-color:         rgba(255,255,255,0.1);
+$book-page-mark-bg:                 #000;
+$book-page-mark-color:              $white;
+$book-page-note-highlight-color:    #5b5e66;
+$book-page-color:                   rgba(255,255,255,0.7);
+$book-page-speak-left-bg:           darken($bg-color,10);
+$book-page-speak-right-bg:          lighten($bg-color,10);;
+$book-page-speak-left-color:        $text-color;
+$book-page-speak-right-color:       $text-color;
+
+//== Drawer
+//
+$drawer-bg:           $bg-dark;
+$drawer-overlay-bg:   rgba(0,0,0,0.5);
+
+//== Tabs
+$tab-bg:                  none;
+$tab-active-color:        $primary-color;
+$tab-color:               $text-color-light;
+
+//== Calendar
+$calendar-bg:                 $bg-color;
+$calendar-head-bg:            $bg-dark;
+
+//== Icon
+$icon-color:                  $white;
+
+//== Button
+$button-color:              $white;
+$button-bg:                 $bg-dark;
+$button-inverse-color:      darken($bg-dark,5);
+$button-inverse-bg:         $white;
+$button-ghost-color:        $white;
+$button-ghost-border-color: lighten($bg-color,20);
+
+//== Icon Button
+$icon-button-background:    $primary-color;
+$icon-button-icon-color:    $bg-color;
+
+
+.theme-dark{
+  @include component-theme;
+  @include view-theme;
+  @include reading-theme;
+}

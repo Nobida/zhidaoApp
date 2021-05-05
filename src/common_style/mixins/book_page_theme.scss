@@ -1,0 +1,109 @@
+@mixin book-page-theme(){
+  .book-page{
+    background: $bg-color;
+    color: $book-page-color;
+    .title-l1, .title-l2, .title-l3, .title-l4, .title-l5, .title-l6 {
+      color: $headings-color;
+      small,
+      .small {
+        color: $headings-small-color;
+      }
+    }
+    .title-l4,.title-l5,.title-l6{
+      border-left: .2em solid $primary-color;
+    }
+    .subtitle-l4,.subtitle-l5,.subtitle-l6{
+      color: $text-color-light;
+    }
+    .poem {
+      .vn{
+        color: $text-color-lighter;
+      }
+    }
+    .quote{
+      border-left: 6px solid $text-color-lighter;
+      color: $text-color-light;
+    }
+    .picbox{
+      span{
+        color: $text-color-light;
+      }
+    }
+    .highlight{
+      background: $book-page-highlight-color;
+    }
+    .note-highlight{
+      background: $book-page-note-highlight-color;
+    }
+    .selection{
+      border-bottom: 2px dashed $primary-color;
+    }
+    .footnote-mark{
+      &::after {
+        color: $book-page-mark-color;
+        background: $book-page-mark-bg;
+      }
+    }
+    .footnotes{
+      border-top: 1px solid $split-line-color;
+    }
+    .footnote{
+      color: $text-color-light;
+      .label{
+        color: $text-color;
+      }
+    }
+    .comment{
+      color: $text-color-light;
+    }
+    //== Comments
+    //== Comments
+    .comments {
+      color: $text-color-light;
+    }
+    .speaker {
+      .nickname {
+        color: $headings-color;
+      }
+
+    }
+    .speak {
+      &.left {
+        .speech {
+          background: $book-page-speak-left-bg;
+          p,a,.comment {
+            color: $book-page-speak-left-color;
+          }
+          .comment{
+            opacity: 0.7;
+          }
+          .selection{
+            border-bottom: 2px dashed $book-page-speak-left-color;
+          }
+          &::before {
+            border-bottom: 10px solid $book-page-speak-left-bg;
+          }
+        }
+      }
+      &.right {
+        .speech {
+          background: $book-page-speak-right-bg;
+          p,a,.comment {
+            color: $book-page-speak-right-color;
+          }
+          .comment{
+            color: $book-page-speak-right-color;
+            opacity: 0.7;
+          }
+          .selection{
+            border-bottom: 2px dashed $book-page-speak-right-color;
+          }
+
+          &::before {
+            border-bottom: 10px solid $book-page-speak-right-bg;
+          }
+        }
+      }
+    }
+  }
+}

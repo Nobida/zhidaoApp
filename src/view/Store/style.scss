@@ -1,0 +1,35 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+.store{
+
+  .header{
+    background: $bg-color;
+    position: fixed;
+    top: 0;
+    left: 0 ;
+    width: 100%;
+    height: $nav-height;
+    @include box-shadow(0px 2px 10px rgba(0,0,0,0.1));
+    @include flex(space-between,center);
+    .left,.right{
+      width: 50%;
+      @include flex(center,center);
+      .score{
+        font-weight: bold;
+        color: $primary-color;
+       }
+       .icon{
+         margin-left: 10px;
+       }
+    }
+  }
+  .store-container{
+    margin-top: $nav-height;
+    padding: $padding-large-vertical $padding-large-horizontal;
+  }
+  .iconbutton{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+}

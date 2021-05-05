@@ -1,0 +1,46 @@
+@mixin calender-theme(){
+  .clndr-head{
+    color:$text-color-light;
+    background: $calendar-head-bg;
+    border-bottom: 1px solid $split-line-color;
+  }
+  .clndr{
+    .clndr-table{
+      background: $calendar-bg;
+      .day{
+        color: $text-color-lighter;
+        &.late{
+            color: $calendar-late-color;
+          }
+          &.future{
+            color: $calendar-future-color;
+          }
+          &.finished{
+            color: $calendar-finished-color;
+          }
+          &.not_finished{
+            color: $calendar-not-finished-color;
+            &::after{
+              background: $calendar-not-finished-color;
+            }
+          }
+      }
+      .highlight{
+          color: $white;
+          &.late{
+            background: $calendar-late-color;
+          }
+          &.finished{
+            background: $calendar-finished-color;
+          }
+          &.not_finished{
+            background: $calendar-not-finished-color;
+            color: $white;
+          }
+          &.not_come{
+            background: $calendar-future-color;
+          }
+        }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.confirm-buttons{
+    margin: 20px;
+    @include flex(flex-end);
+    .button{
+      display: inline-block;
+      margin:0 10px;
+    }
+}

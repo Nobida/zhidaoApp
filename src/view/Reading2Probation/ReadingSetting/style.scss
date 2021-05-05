@@ -1,0 +1,67 @@
+@import "../../../common_style/variables";
+@import "../../../common_style/mixins";
+$theme-green: #c0d6bd;
+$theme-yellow: #d3d0bc;
+.reading-setting{
+    .setting-item{
+      margin: 20px 0;
+      @include flex(flex-start,center);
+      .setting-title{
+        margin-right: 20px;
+        font-size: $font-size-base;
+      }
+      .setting-content{
+        @include flex(flex-start,center);
+      }
+      .font-setting{
+        padding: 3px 20px;
+        border-radius: 40px;
+        margin-right: 10px;
+        border: 1px solid $split-line-color;
+        color: $text-color-light;
+        @include transition(.2s all);
+        &.active{
+          color: $white;
+          background: $primary-color;
+          border: 1px solid $primary-color;
+        }
+      }
+      .bg-setting{
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        margin-right: 20px;
+        &.active{
+          @include box-shadow(0px 1px 15px rgba(0,0,0,0.2));
+        }
+      }
+      .bg-white{
+        background: $white;
+        border: 3px solid $white;
+        &.active{
+            border: 3px solid $primary-color;
+        }
+      }
+      .bg-yellow{
+        background: $theme-yellow;
+        border: 3px solid $theme-yellow;
+        &.active{
+            border: 3px solid $primary-color;
+        }
+      }
+      .bg-green{
+        background: $theme-green;
+        border: 3px solid $theme-green;
+        &.active{
+            border: 3px solid $primary-color;
+        }
+      }
+      .bg-dark{
+        background: $grey-dark;
+        border: 3px solid $grey-dark;
+        &.active{
+            border: 3px solid #000;
+        }
+      }
+    }
+  }

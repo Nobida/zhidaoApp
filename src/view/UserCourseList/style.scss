@@ -1,0 +1,46 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+$course-item-height: 200px;
+.course-list{
+  .course-item{
+    width: 100%;
+    height: $course-item-height;
+    overflow: hidden;
+    position: relative;
+    margin: 20px 0;
+    @include rounded-corner(8px);
+    @include box-shadow(2px 10px 40px rgba(108,125,135,0.5));
+    .bg-container{
+      background: $dark;
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: $course-item-height;
+      img{
+        width: 100%;
+        opacity: 0.6;
+      }
+    }
+    .title{
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: $course-item-height;
+      font-size: $font-size-h3;
+      font-weight: bold;
+      color: $white;
+      @include flex(center,center);
+    }
+    &.white{
+      .bg-container{
+        background: $white;
+      }
+      .title{
+        color: $dark;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,10 @@
+@mixin home-theme() {
+  .home {
+    .date {
+      color: $text-color-light;
+    }
+    .head-cap {
+      background: $bg-light;
+    }
+  }
+}

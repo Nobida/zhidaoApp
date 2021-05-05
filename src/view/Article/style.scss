@@ -1,0 +1,8 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+.article{
+  padding: $padding-small-horizontal;
+  .content{
+    margin: 15px;
+  }
+}

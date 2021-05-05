@@ -1,0 +1,68 @@
+@mixin audio-theme() {
+  .audio-player {
+    background: $bg-color;
+    .controls {
+      svg {
+        fill: $primary-color;
+      }
+      .disable {
+        svg {
+          fill: $text-color-lighter;
+        }
+      }
+    }
+
+    .title {
+      font-size: $font-size-small;
+    }
+
+    #hidden-player {
+      display: none;
+    }
+    .top-container, .bottom-container {
+      @include flex(space-between, center);
+      padding: 0 20px;
+    }
+    .top-container {
+      height: 60px;
+    }
+
+    progress[value] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: calc(100% - 100px);
+      height: 6px;
+      border-radius: 50px;
+    }
+
+    progress[value]::-webkit-progress-bar {
+      background-color: $split-line-color;
+    }
+
+    progress[value]::-webkit-progress-value {
+      background-color: $brand-color;
+    }
+    .hide-handler {
+      background: $split-line-color;
+      svg {
+        fill: $text-color-light;
+      }
+    }
+  }
+
+  .audio-player-small {
+    .hide-handler {
+      background: $split-line-color;
+      svg {
+        width: 10px;
+        fill: $text-color-light;
+      }
+    }
+    .play-btn-sm {
+      svg {
+        width: 8px;
+        fill: $primary-color;
+      }
+    }
+  }
+}

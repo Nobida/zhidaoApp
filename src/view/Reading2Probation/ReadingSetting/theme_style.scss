@@ -1,0 +1,42 @@
+@mixin reading-setting-theme() {
+  .reading-setting {
+    .setting-item {
+      .setting-content {
+        @include flex(flex-start, center);
+      }
+      .font-setting {
+
+        border: 1px solid $split-line-color;
+        color: $text-color-light;
+        @include transition(.2s all);
+        &.active {
+          color: $text-color-inverse;
+          background: $primary-color;
+          border: 1px solid $primary-color;
+        }
+      }
+
+      .bg-white {
+
+        &.active {
+          border: 3px solid $primary-color;
+        }
+      }
+      .bg-yellow {
+        &.active {
+          border: 3px solid $primary-color;
+        }
+      }
+      .bg-green {
+        &.active {
+          border: 3px solid $primary-color;
+        }
+      }
+      .bg-dark {
+        &.active {
+          border: 3px solid $primary-color;
+        }
+      }
+    }
+  }
+}

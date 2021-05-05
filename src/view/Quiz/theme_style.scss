@@ -1,0 +1,21 @@
+@mixin quiz-theme(){
+  .quiz{
+    .quiz-item{
+      .quiz-num{
+        color: $white;
+        background: $dark;
+      }
+      .quiz-answer{
+        .content{
+          color: $text-color-light;
+        }
+        &.active{
+          background: $bg-dark;
+          .content{
+            color: $text-color;
+          }
+        }
+      }
+    }
+  }
+}

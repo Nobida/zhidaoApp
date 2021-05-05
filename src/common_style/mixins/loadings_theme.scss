@@ -1,0 +1,8 @@
+@mixin loadings-theme(){
+  .loadings{
+   background: $bg-color;
+    svg{
+      fill: $primary-color;
+    }
+  }
+}

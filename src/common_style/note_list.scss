@@ -1,0 +1,65 @@
+.note-list-item{
+    margin: $note-list-item-margin 0;
+    padding: $note-list-item-padding;
+
+    .item-head{
+       margin-bottom: 10px;
+       @include flex(space-between,center);
+       .user-info{
+         @include flex(flex-start,center);
+       }
+       .nickname{
+         margin-left: 5px;
+         font-size: $font-size-small;
+         color: $text-color-light;
+       }
+       .time{
+         font-size: $font-size-small;
+         color: $text-color-lighter;
+       }
+    }
+
+    .desc{
+      font-size: $note-list-item-font-size;
+    }
+    .quote{
+      color:$text-color-light;
+      font-size: $note-list-item-font-size-small;
+      font-style: italic;
+      border-left: 6px solid $text-color-lighter;
+      padding: 2px 0 2px 10px;
+    }
+    .source-lesson-name{
+      color:$text-color-lighter;
+      font-size: $note-list-item-font-size-tiny;
+      padding: 10px 2px;
+      text-align: right;
+    }
+  .bottom-tool{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: $text-color-lighter;
+    font-size: $font-size-small;
+    @include flex(space-between,center);
+    .check-vip{
+      background: $brand-color;
+      color: $text-color-inverse;
+      padding: 0 7px;
+      height: 18px;
+      font-size: 12px;
+      @include flex(center,center);
+      @include rounded-corner(20px);
+    }
+    .right{
+      @include flex(flex-end,center);
+      .icon{
+      margin-left: 20px;
+      }
+    }
+
+    span{
+      margin-left: 5px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+$emphasis-color: #50a39b;
+.score-rule {
+  b{
+    color: $emphasis-color;
+  }
+  img{
+    width: 100%;
+  }
+  .underline{
+    border-bottom: 2px dashed $emphasis-color;
+    font-weight: 600;
+  }
+  ul {
+    padding-left: 20px;
+    li{
+      line-height: $line-height-base;
+    }
+    ul{
+      padding-left: 40px;
+    }
+  }
+}

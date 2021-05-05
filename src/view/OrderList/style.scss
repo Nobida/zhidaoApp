@@ -1,0 +1,25 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+.order-list{
+  padding: $padding-large-vertical;
+  margin-top: 60px;
+  .confirm-buttons{
+    margin-right: 0;
+  }
+  .fixed-head{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .detail-content{
+    margin:25px;
+    font-size: $font-size-small;
+    line-height: 1.8em;
+  }
+  .drawer-content{
+    margin:25px;
+    font-size: $font-size-small;
+    line-height: 1.8em;
+  }
+}

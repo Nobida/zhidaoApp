@@ -1,0 +1,19 @@
+@mixin reading-content-theme() {
+  .reading-content {
+    .page-title {
+      color: $primary-color;
+      svg {
+        fill: $primary-color;
+        height: 30px;
+      }
+      &:after {
+        background: $primary-color;
+      }
+    }
+    .lock-lecture{
+        svg{
+          fill: $text-color-lighter;
+        }
+      }
+  }
+}

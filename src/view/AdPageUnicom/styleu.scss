@@ -1,0 +1,99 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+.ad-page{
+  margin-bottom: $nav-height+30px;
+  .label{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    background: $brand-color;
+    color: white;
+    font-size: $font-size-tiny;
+    padding: 3px 7px;
+    @include rounded-corner(30px);
+
+  }
+  .ad-header-unicom{
+    @include flex(center,center,column);
+    margin: 20px;
+    margin-bottom: 50px;
+    height: 100%;
+    .course-name{
+      font-weight: bold;
+    }
+    .card-info{
+      background: none;
+      height: 100%;
+    }
+    .card{
+      background: none;
+      height: 100%;
+    }
+    .desc{ 
+      opacity: 0.8;
+      font-size: $font-size-small;
+      margin-top: 10px;
+    }
+    img{
+      height: 100%;
+    }
+  }
+  .info-box{
+    background: $white;
+    margin-top: -50px;
+    z-index: 1000;
+    font-size: $font-size-small;
+    width: 80%;
+    position: relative;
+    @include box-shadow(0 0 30px rgba(0,0,0,0.1));
+    @include rounded-corner(10px);
+    @include flex(space-between);
+    .item{
+      margin: 15px;
+      width: 40%;
+      @include flex(center,center,column);
+      color: $text-color-light;
+      .time{
+        font-size: $font-size-tiny;
+        font-weight: bold;
+        color: $primary-color;
+      }
+    }
+  }
+  .discount-info{
+    position: fixed;
+    bottom: $nav-height;
+    left: 0;
+    right:0;
+    background: white;
+    color: $text-color-light;
+    font-size: $font-size-small;
+    padding: 10px 0 0 35px;
+    .price{
+      color: $brand-color;
+      font-weight: bold;
+    }
+  }
+  .ad-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 15px);
+    height: 60px;
+    padding: 0 10px;
+    .buy{
+      height: 40px;
+      margin: 0 20px;
+      background: $brand-color;
+      width: 100%;
+      margin-bottom: 10px 0;
+      border-radius: 20px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-size: 16px;
+    }
+  }
+  .back-to-home{
+    background: green;
+  }
+}

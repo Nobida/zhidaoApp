@@ -1,0 +1,45 @@
+@import "mixins/component_theme";
+@import "mixins/gift_theme";
+$primary-color:             $white;
+$primary-red:               #c6554a;
+$bg-color:                  $primary-red ;
+$bg-dark:                   $primary-red;
+$bg-light:                  $primary-red;
+
+
+$text-color:                $white;
+$text-color-light:          rgba(255,255,255,0.4) ;
+$text-color-lighter:        rgba(255,255,255,0.2);
+$headings-color:            $primary-color;
+$headings-small-color:      $text-color-light;
+
+$split-line-color:          rgba(255,255,255,0.1);
+
+//== Tabs
+$tab-bg:                  $bg-color;
+$tab-active-color:        $primary-color;
+$tab-color:               $text-color-light;
+
+
+//== Icon
+$icon-color:                  $white;
+
+//== Drawer
+//
+$drawer-bg:           $bg-dark;
+$drawer-overlay-bg:   rgba(147,50,50,0.5);
+
+//== Button
+$button-color:              $primary-red;
+$button-bg:                 $white;
+$button-inverse-color:      darken($bg-dark,5);
+$button-inverse-bg:         $white;
+$button-ghost-color:        $white;
+$button-ghost-border-color: lighten($bg-color,20);
+
+.theme-red{
+  @include component-theme;
+  @include gift-view-theme;
+  color: $text-color;
+  background: $bg-color;
+}

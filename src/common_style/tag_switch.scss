@@ -1,0 +1,10 @@
+.tag-switch-container{
+    height: 50px;  
+    padding-right: 15px;
+    border-bottom: 1px solid $split-line-color; 
+    background: white;  
+    @include flex(flex-end,center);
+    .tag-item{   
+        margin-left: 10px;
+    }
+} 

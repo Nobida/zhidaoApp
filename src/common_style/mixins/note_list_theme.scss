@@ -1,0 +1,25 @@
+@mixin note-list-theme {
+    .note-list-item {
+      .item-head {
+        .nickname {
+          color: $text-color-light;
+        }
+        .time {
+
+          color: $text-color-lighter;
+        }
+      }
+      .quote {
+        color: $text-color-light;
+        border-left: 6px solid $text-color-lighter;
+      }
+      .bottom-tool {
+        color: $text-color-lighter;
+        font-size: $font-size-small;
+        .check-vip {
+          background: $primary-color;
+          color: $text-color-inverse;
+        }
+      }
+    }
+}

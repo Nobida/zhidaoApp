@@ -1,0 +1,126 @@
+@import "../../common_style/variables";
+@import "../../common_style/mixins";
+$reply-box-height: 160px;
+.post{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: $nav-height;
+  overflow: scroll;
+  padding: $padding-base-horizontal $padding-small-vertical;
+  .post-item{
+    padding: 10px;
+    @include flex(flex-start);
+    .avatar{
+      margin-right: 20px;
+      flex-shrink: 0 ;
+    }
+    .post-content{
+      width: 100%;
+      .head{
+        @include flex(space-between);
+        font-size: $font-size-base;
+        color: $text-color-light;
+        margin: 10px 0;
+        .time{
+          font-size: $font-size-small;
+        }
+      }
+      .content{
+        font-size: $font-size-base;
+        color: $text-color;
+        line-height: $line-height-base;
+      }
+      .quote{
+        border-left: 5px solid $split-line-color;
+        padding: 5px 10px;
+        margin: 10px 0;
+        color: $text-color-light;
+        //font-size: $font-size-small;
+      }
+      .bottom-tool{
+        @include flex(flex-end);
+        .heart{
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .post-favor{
+      @include flex(space-between,center);
+      margin: 20px 10px;
+      .avatars{
+         @include flex(flex-start);
+        .avatar{
+          margin-right: 10px;
+        }
+      }
+  }
+
+  .post-replys{
+      margin-top: 10px;
+      border-top: 1px solid $split-line-color;
+      padding-top: 20px;
+  }
+  .reply-input-container{
+      padding: $padding-base-horizontal $padding-large-vertical;
+      height: $reply-box-height;
+  }
+  .reply-input{
+      border: none;
+      outline: none;
+      width: 100%;
+      font-size: $font-size-base;
+      line-height: $line-height-base;
+      font-family: $font-family-base;
+      height: $reply-box-height - 60px;
+      margin-bottom: 10px;
+      background: $bg-dark;
+      &:focus{
+        outline: none;
+      }
+  }
+  .reply-submit-buttons{
+      @include flex(flex-end);
+      .button{
+        display: inline-block;
+        margin-left: 20px;
+      }
+  }
+  .post-bottom{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: $nav-height;
+      background: $bg-dark;
+      padding: 0 $padding-base-horizontal;
+      @include flex(space-between,center);
+      .show-reply-input-button{
+          width: calc(100% - 70px);
+          height: 35px;
+          padding: 0 10px;
+          color: $text-color-lighter;
+          background: $bg-light;
+          @include flex(flex-start,center);
+      }
+  }
+
+  .delete-post-container{
+    padding-top: 30px;
+    .delete-content{
+      margin: 0 20px;
+      max-height: 200px;
+      overflow: scroll;
+    }
+    .button-tools{
+      @include flex(flex-end)
+    }
+    .button{
+      display: inline-block;
+      margin: 10px;
+    }
+  }
+}

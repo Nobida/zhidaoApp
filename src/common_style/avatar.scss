@@ -1,0 +1,32 @@
+
+//== Avatar
+
+.avatar{
+  position: relative;
+  overflow: hidden;
+  @include rounded-corner(100%);
+  @include box-shadow(2px 2px 8px rgba(0,0,0,0.1));
+
+  img{  width: 100%;  }
+
+  &.tiny{
+    width: $avatar-size-tiny;
+    height: $avatar-size-tiny;
+  }
+  &.small{
+    width: $avatar-size-small;
+    height: $avatar-size-small;
+  }
+  &.middle{
+    width: $avatar-size-middle;
+    height: $avatar-size-middle;
+  }
+  &.big{
+    width: $avatar-size-big;
+    height: $avatar-size-big;
+  }
+  &.large{
+    width: $avatar-size-large;
+    height: $avatar-size-large;
+  }
+}
